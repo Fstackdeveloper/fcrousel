@@ -1,0 +1,14 @@
+{
+  "name": "fcrousel",
+  "version": "0.0.1",
+  "description": "Multi Items Crousel for Bootstrap",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fstackdeveloper/fcrousel"
+  },
+  "author": "Mohamed Jasim <info@fullstackdeveloper.org> (https://fullstackdeveloper.org)",
+  "license": "MIT"
+}
