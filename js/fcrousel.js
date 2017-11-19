@@ -11,6 +11,7 @@
 		        var settings = $.extend({
 		            // These are the defaults.
 		            width: "400px",
+		            height: "auto",
 		            move: true
 		        }, options );
 
@@ -19,6 +20,7 @@
 					var slides = $(this).find( ".fcarousel-item" );	
 					var length = slides.length;
 					var fullWidth =0 ;	
+					var fthis = this;
 					
 					if (window.matchMedia("(min-width: 768px)").matches) {
 						slides.css('width', settings.width);
@@ -27,6 +29,18 @@
 						{
 						 slides.css('width', "100vw");
 						}
+					
+					
+					if (slides.innerHeight() > 100 && settings.height == "auto")
+					{
+						fthis.css('height', slides.innerHeight()+'px');
+					}
+					else if (settings.height != "auto")
+						{
+						  fthis.css('height', settings.height);
+						  slides.css('height', settings.height);
+						}
+
 					
 					$( window ).resize( function () {
 						
@@ -37,7 +51,20 @@
 							{
 							 slides.css('width', "100vw");
 							}
+						
+						
+						if (slides.innerHeight() > 100 && settings.height == "auto")
+						{
+							fthis.css('height', slides.innerHeight()+'px');
+						}
+						else if (settings.height != "auto")
+							{
+							  fthis.css('height', settings.height);
+							  slides.css('height', settings.height);
+							}
 
+						
+						
 					});
 
 					
@@ -134,7 +161,6 @@
 				
 				
 				//On Swipe Events (for Mobile)
-					var fthis = this;
 				   Hammer(this[ 0 ]).on("swipeleft", function(e)
 											   {
 					   								prev(fthis);   

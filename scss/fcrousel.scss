@@ -1,6 +1,6 @@
 .fcarousel 
 	{
-		height:300px;
+		min-height:300px;
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -33,7 +33,7 @@
 	{
 		display: block;
 		float: left;
-		height: 300px;
+		min-height: 300px;
 		overflow: hidden;
 		background-size: cover;
 		padding: 0;
