@@ -5,12 +5,42 @@
 (function ( $ ) {
  
 
-			$.fn.fcarousel = function() {
+			$.fn.fcarousel = function(options) {
+				
+		        // This is the easiest way to have default options.
+		        var settings = $.extend({
+		            // These are the defaults.
+		            width: "400px",
+		            move: true
+		        }, options );
+
 				
 				// Set warp width based on number and width or items
 					var slides = $(this).find( ".fcarousel-item" );	
 					var length = slides.length;
 					var fullWidth =0 ;	
+					
+					if (window.matchMedia("(min-width: 768px)").matches) {
+						slides.css('width', settings.width);
+						}
+					else 
+						{
+						 slides.css('width', "100vw");
+						}
+					
+					$( window ).resize( function () {
+						
+						if (window.matchMedia("(min-width: 768px)").matches) {
+							slides.css('width', settings.width);
+							}
+						else 
+							{
+							 slides.css('width', "100vw");
+							}
+
+					});
+
+					
 					slides.each(function( index ) {
 										fullWidth += $(this).outerWidth(true);
 									});
@@ -39,12 +69,19 @@
 					 
 					 if (!WaitAnimation)
 						{
-					clearInterval(autoMove);
+						 
+						 if(settings.move) { clearInterval(autoMove); }
+					
 					var length = fthis.find(".fcarousel-item" ).length;
 					var target_item = length-1;
 					WaitAnimation = true;
 					var vleft = fthis.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-					fthis.find(".fcarousel-warp" ).prepend(fthis.find( ".fcarousel-item" ).eq(target_item)).css('left',-vleft).animate({left:0},500,function(){WaitAnimation = false;autoMove = setInterval(function (){next(fthis)}, 4000);});
+					fthis.find(".fcarousel-warp" ).prepend(fthis.find( ".fcarousel-item" ).eq(target_item)).css('left',-vleft).animate({left:0},500,function(){WaitAnimation = false;
+					
+					 if(settings.move) { autoMove = setInterval(function (){next(fthis)}, 4000); }
+					 
+					});
+					
 							
 						}
 
@@ -54,11 +91,22 @@
 				{
 					if (!WaitAnimation)
 						{
-					clearInterval(autoMove);
+						
+				    if(settings.move) { clearInterval(autoMove); }
+					
 					var target_item = 0;
 					WaitAnimation = true;
 					var vleft = fthis.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-					fthis.find(".fcarousel-warp" ).animate({left:-vleft},500,function(){WaitAnimation = false; $(this).css('left',0); $(this).append(fthis.find( ".fcarousel-item" ).eq(target_item));autoMove = setInterval(function (){prev(fthis)}, 4000);});			
+					fthis.find(".fcarousel-warp" ).animate({left:-vleft},500,function(){
+					WaitAnimation = false; 
+					$(this).css('left',0); 
+					$(this).append(fthis.find( ".fcarousel-item" ).eq(target_item));
+					
+					 if(settings.move) { autoMove = setInterval(function (){prev(fthis)}, 4000);}
+					 
+					
+					});	
+					
 						}
 
 					
@@ -101,7 +149,7 @@
 				
 				
 					
-					var autoMove = setInterval(function (){next(fthis)}, 4000);
+				    if(settings.move) {  var autoMove = setInterval(function (){next(fthis)}, 4000); }
 
 			
 			return this;
