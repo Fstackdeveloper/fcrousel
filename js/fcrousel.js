@@ -62,6 +62,14 @@
 							  fthis.css('height', settings.height);
 							  slides.css('height', settings.height);
 							}
+						
+						fullWidth_resize = 0;
+						slides.each(function( index ) {
+							fullWidth_resize += $(this).outerWidth(true);
+						});
+
+						fthis.find( ".fcarousel-warp" ).width(fullWidth_resize + 20);
+
 
 						
 						
@@ -72,7 +80,7 @@
 										fullWidth += $(this).outerWidth(true);
 									});
 		
-					$(this).find( ".fcarousel-warp" ).width(fullWidth);
+					$(this).find( ".fcarousel-warp" ).width(fullWidth + 20);
 				
 				
 				
