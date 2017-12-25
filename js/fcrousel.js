@@ -22,9 +22,13 @@
 					var fullWidth =0 ;	
 					var fthis = this;
 					
-					if (window.matchMedia("(min-width: 768px)").matches) {
-						slides.css('width', settings.width);
+					if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1100px)").matches) {
+						 slides.css('width', "50vw");
 						}
+                                        else if (window.matchMedia("(min-width: 1100px)").matches)
+                                        {
+                                                slides.css('width', settings.width);
+                                        }
 					else 
 						{
 						 slides.css('width', "100vw");
@@ -44,13 +48,17 @@
 					
 					$( window ).resize( function () {
 						
-						if (window.matchMedia("(min-width: 768px)").matches) {
-							slides.css('width', settings.width);
-							}
-						else 
-							{
-							 slides.css('width', "100vw");
-							}
+					if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1100px)").matches) {
+						 slides.css('width', "50vw");
+						}
+                                        else if (window.matchMedia("(min-width: 1100px)").matches)
+                                        {
+                                                slides.css('width', settings.width);
+                                        }
+					else 
+						{
+						 slides.css('width', "100vw");
+						}
 						
 						
 						if (slides.innerHeight() > 100 && settings.height == "auto")
