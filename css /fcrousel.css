@@ -76,3 +76,70 @@
 	}
 
 	}
+
+        
+        
+         
+ 
+.fcarousel   .fcarousel-control-prev-wrapper
+{
+	position: absolute;
+        top: 0px;
+	left: 0;
+	z-index: 89;
+        height: calc(100% - 0px);
+        width:25px;
+        background: rgba(0, 0, 0, 0.7);
+}
+
+.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev
+{
+   left: 5px;
+}
+
+.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev  i 
+{
+    color: #ffffff !important;
+}
+	
+.fcarousel .fcarousel-control-next-wrapper
+{
+	position: absolute;
+        top: 0px;
+	right: 0;
+	z-index: 89;
+        height: calc(100% - 0px);
+        width:25px;
+        background: rgba(0, 0, 0, 0.7);
+}
+
+.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next  i 
+{
+    color: #ffffff;
+}
+
+.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next 
+{
+	right: 5px;
+    
+}
+
+
+
+@media (min-width: 769px) {
+    .fcarousel-warp
+    {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+		
+.fcarousel-item
+{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+}
