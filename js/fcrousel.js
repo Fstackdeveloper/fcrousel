@@ -9,13 +9,14 @@
 				
 		        // This is the easiest way to have default options.
 		        var settings = $.extend({
-		            // These are the defaults.
-		            width: "400px",
+		            // These are the defaults
 		            height: "auto",
 		            move: true
 		        }, options );
-
-				
+                        
+                        item_width_3 = $(this).innerWidth()/3 - 26;
+                        item_width_2 = $(this).innerWidth()/2 - 26;
+                        
 				// Set warp width based on number and width or items
 					var slides = $(this).find( ".fcarousel-item" );	
 					var length = slides.length;
@@ -23,11 +24,11 @@
 					var fthis = this;
 					
 					if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1100px)").matches) {
-						 slides.css('width', "50vw");
+						 slides.css('width', item_width_2 + "px");
 						}
                                         else if (window.matchMedia("(min-width: 1100px)").matches)
                                         {
-                                                slides.css('width', settings.width);
+                                                slides.css('width', item_width_3 + "px");
                                         }
 					else 
 						{
@@ -47,13 +48,15 @@
 
 					
 					$( window ).resize( function () {
-						
+                                       item_width_3 = fthis.innerWidth()/3 - 26;
+                                       item_width_2 = fthis.innerWidth()/2 - 26;
+	
 					if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1100px)").matches) {
-						 slides.css('width', "50vw");
+						 slides.css('width', item_width_2 + "px");
 						}
                                         else if (window.matchMedia("(min-width: 1100px)").matches)
                                         {
-                                                slides.css('width', settings.width);
+                                                slides.css('width', item_width_3 + "px");
                                         }
 					else 
 						{
