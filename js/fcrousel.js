@@ -14,6 +14,16 @@
 		            move: true
 		        }, options );
                         
+                        if(typeof $(this).data('move') !== "undefined")
+                        {
+                          settings.move =  $(this).data('move');
+                        }
+                        if(typeof $(this).data('height') !== "undefined")
+                        {
+                            settings.height =  $(this).data('height');
+                        }
+                        
+                        
                         item_width_3 = $(this).innerWidth()/3 - 26;
                         item_width_2 = $(this).innerWidth()/2 - 26;
                         
@@ -38,7 +48,20 @@
 					
 					if (slides.innerHeight() > 100 && settings.height == "auto")
 					{
-						fthis.css('height', slides.innerHeight()+'px');
+                              var innerHeight = 0, detailsInnerHeight=0;
+                              slides.each(function (index) {
+                                  if ($(this).innerHeight() > innerHeight)
+                                     {
+                                   innerHeight = $(this).innerHeight();
+                                    detailsInnerHeight = $(this).find('.link-page-details').eq(0).innerHeight();
+                                     }
+                                    });
+                                    
+                               slides.each(function (index) {
+                                       $(this).css('height', innerHeight +'px');
+                                       $(this).find('.link-page-details').eq(0).css('height', detailsInnerHeight +'px');
+                                    });
+                               fthis.css('height', (innerHeight + 2) +'px');
 					}
 					else if (settings.height != "auto")
 						{
@@ -66,7 +89,20 @@
 						
 						if (slides.innerHeight() > 100 && settings.height == "auto")
 						{
-							fthis.css('height', slides.innerHeight()+'px');
+                                var innerHeight = 0, detailsInnerHeight=0;
+                              slides.each(function (index) {
+                                  if ($(this).innerHeight() > innerHeight)
+                                     {
+                                   innerHeight = $(this).innerHeight();
+                                   detailsInnerHeight = $(this).find('.link-page-details').eq(0).innerHeight();
+                                     }
+                                    });
+                                    
+                               slides.each(function (index) {
+                                       $(this).css('height', innerHeight +'px');
+                                       $(this).find('.link-page-details').eq(0).css('height', detailsInnerHeight +'px');
+                                    });
+                               fthis.css('height', (innerHeight + 2) +'px');
 						}
 						else if (settings.height != "auto")
 							{
