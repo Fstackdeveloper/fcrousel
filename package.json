@@ -10,6 +10,6 @@
     "url": "https://github.com/Fstackdeveloper/fcrousel"
   },
   "author": "Mohamed Jasim <info@fullstackdeveloper.org> (https://fullstackdeveloper.org)",
-  "main": "js/fcrousel",
+  "main": "dist/js/fcrousel",
   "license": "MIT"
 }

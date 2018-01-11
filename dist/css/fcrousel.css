@@ -1,6 +1,6 @@
 .fcarousel 
 	{
-		height:300px;
+		min-height:300px;
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -29,16 +29,16 @@
 		left:0;
 	}
 
-.fcarousel-item 
+.fcarousel-item
 	{
 		display: block;
 		float: left;
-		height: 300px;
+		min-height: 300px;
 		overflow: hidden;
 		background-size: cover;
 		padding: 0;
-		margin-right: 0;
-		margin-left: 5px;
+		margin-right: 3.3px;
+		margin-left: 3.3px;
                 margin-top: 0;
 		margin-bottom: 0;
 		width: 400px;
@@ -79,7 +79,6 @@
 
         
         
-         
  
 .fcarousel   .fcarousel-control-prev-wrapper
 {
