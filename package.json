@@ -11,5 +11,12 @@
   },
   "author": "Mohamed Jasim <info@fullstackdeveloper.org> (https://fullstackdeveloper.org)",
   "main": "dist/js/fcrousel",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.10.0"
+  }
 }
