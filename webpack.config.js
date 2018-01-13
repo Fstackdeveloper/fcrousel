@@ -10,9 +10,9 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({ parallel: true, uglifyOptions: { ecma: 7 }, beautify: false, sourceMap: true, comments: false,
         minimize: true,
-        compress: false
-        })
+        compress: true
+        }),
   ],
-  module: { rules: [{ test: /\.js$/, use: [{ loader: 'babel-loader', options: { presets: ['es2015'] } }] }] }
+  module: { rules: [{ test: /\.js$/, use: [{ loader: 'babel-loader', options: { presets: ["es2015", "es2017", "stage-2", 'react'] } }] }], }
   
 };

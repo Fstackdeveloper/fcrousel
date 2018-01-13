@@ -1,76 +1,53 @@
 
 import {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain} from './fcrousel.functions.js';
 import {sizing} from './fcrousel.sizing.js';
+import {pagination} from './fcrousel.pagination.js';
+import {design} from './fcrousel.design.js';
+import {setting} from './fcrousel.setting.js';
+import {items} from './fcrousel.items.js';
+import {imageCrop} from './items/fcrousel.image.crop.js';
+import {image} from './items/fcrousel.image.js';
+import {videoLink} from './items/fcrousel.video.link.js';
 
 (function ( $ ) {
 
 $.fn.fcarouselNew = function() { 
-    // This is the easiest way to have default options.
-    var settings = $.extend({
-    // These are the defaults
-    imgHeight: "auto",
-    imgRatio: "1:1",
-    imgcrop: false,
-    radius: '0',
-    move: false
-    }, $(this).data() );
-    
     
  //Generate Unique ID for fcrousel
  var fID = uniqId();   
- //Set ID for fcrousel
- $(this).attr('id',fID);
- var fthis = $(this);
+ 
+ var fcrousel = $(this);
+ fcrousel.settings = new setting($(this).data()).get();
+ fcrousel.items =  (new items(fcrousel)).get();
+ var settings =  fcrousel.settings; 
+ var paginate = new pagination(fcrousel,settings.move );
+ var size = new sizing(fcrousel);
+ var fdesign = new design(fcrousel);
+ fdesign.buttonsWithWarpper();
 
     
-    settings.imgRatio = settings.imgRatio.split(":");
+
+
+ fcrousel.items.forEach(function(item) {
+    if (item.type === 'image' && !item.imgcrop)
+    { 
+        new image(item, fcrousel);
+    }
+    else  if (item.type === 'image' && item.imgcrop)
+    {
+        new imageCrop(item, fcrousel);
+    }
+    else if(item.type === 'video-link' )
+    {
+         new videoLink(item, fcrousel);
+    }
     
-        // Add Main CSS Class
-        if(!$(this).hasClass("fcarousel")){
-                 $(this).addClass("fcarousel");
-            }
-        
-        
-        // Add Inner Warp
-        var InnerWarp = "<div class='fcarousel-inner'></div>";
-        
-        // Add Outer Warp
-        var OuterWarp = "<div class='fcarousel-outer'>"+InnerWarp+"</div>";
-        
-        $(this).append(OuterWarp);
-        
-        
-        
-        //Pagination
-        
-        //Previous
-        
-    var  paginationPrev = ` 
-        <div class='fcarousel-control-prev-wrapper'>
-        <a class='fcarousel-control-prev' href='javascript:' role='button' data-slide='prev'>
-            <i class='fa fa-chevron-left fa-lg'></i>
-            <span class='sr-only'>Previous</span>
-        </a>
-        </div>            
-         `;
- $(this).append(paginationPrev);
+});
+
+         
 
 
-    var  paginationNext = ` 
-        <div class='fcarousel-control-next-wrapper'>
-        <a class='fcarousel-control-next' href='javascript:' role='button' data-slide='next'>
-            <i class='fa fa-chevron-right fa-lg'></i>
-            <span class='sr-only'>Next</span>
-        </a>
-        </div>            
-         `;
- $(this).append(paginationNext);
- 
- 
- 
-
-
-
+/*
      
        //Items 
         $(this).find("[data-item]").each(function (index) {
@@ -78,7 +55,7 @@ $.fn.fcarouselNew = function() {
             //Image Type
             if ($(this).prop("tagName") === 'IMG' &&  settings.imgcrop === false )
             { 
-                var url = $(this).data('full');
+                var url = $(this).data('full_image');
                 var a = (url) ? "<a rel='fancybox_img_" + fID +"'  href='" + url + "' ></a>" : "";
                 var img = "<img class='fcarousel-photo' src='"+ $(this).attr('src') +"'>";
                 var item = "<div class='fcarousel-item fcarousel-photo-warp' > "+ a + img +" </div>";
@@ -97,7 +74,7 @@ $.fn.fcarouselNew = function() {
             }      
             else if ($(this).prop("tagName") === 'IMG' &&  settings.imgcrop === true)
             {
-                var url = $(this).data('full');
+                var url = $(this).data('full_image');
                 var a = (url) ? "<a rel='fancybox_img_" + fID +"'  href='" + url + "' ></a>" : "";
                 var item = "<div class='fcarousel-item fcarousel-photo-crop' style='background:url("+ $(this).attr('src') +");background-size: cover;'>"+ a +"</div>";
                 $(item).appendTo( $(this).parent().find(".fcarousel-inner") ).on('click', function (e) { 
@@ -154,72 +131,19 @@ $.fn.fcarouselNew = function() {
         
  
 
+*/
 
-
-
-// Pagination Function
-    var WaitAnimation = false;
-    var next = function (fthis)
-	{
-            if (!WaitAnimation)
-		{				 
-		if(settings.move) { clearInterval(autoMove); }			
-		var length = fthis.find(".fcarousel-item" ).length;
-                var target_item = length-1;
-		WaitAnimation = true;
-		var vleft = fthis.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-		fthis.find(".fcarousel-inner" ).prepend(fthis.find( ".fcarousel-item" ).eq(target_item)).css('left',-vleft).animate({left:0},500,function(){WaitAnimation = false;					
-		if(settings.move) { autoMove = setInterval(function (){next(fthis);}, 4000); }
-	});}};
-				
-    var prev = function (fthis)
-	{
-            if (!WaitAnimation)
-		{
-		if(settings.move) { clearInterval(autoMove); }
-		var target_item = 0;
-                WaitAnimation = true;
-		var vleft = fthis.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-		fthis.find(".fcarousel-inner" ).animate({left:-vleft},500,function(){
-		WaitAnimation = false; 
-		$(this).css('left',0); 
-		$(this).append(fthis.find( ".fcarousel-item" ).eq(target_item));
-		if(settings.move) { autoMove = setInterval(function (){prev(fthis);}, 4000);}
-	});}};
-
-
-        // On Click Events (Next Prev)
-	$(this).find( ".fcarousel-control-prev" ).on('click', { fthis : $(this) }, function(e)
-            {
-		prev(e.data.fthis);
-            });
-
-	$(this).find( ".fcarousel-control-next" ).on('click', { fthis : $(this) }, function(e)
-            {
-                next(e.data.fthis);
-            });
+    paginate.click();
+    paginate.swipe();
 
         
-        
-      	//On Swipe Events (for Mobile)
-	Hammer(this[ 0 ]).on("swipeleft", function(e)
-            {
-		prev(fthis);   
-	    });		
-	
-        Hammer(this[ 0 ]).on("swiperight", function(e) 
-            {
-		next(fthis);
-            });
 				
 				
-	//Auto Move				
-	if(settings.move) {  var autoMove = setInterval(function (){next(fthis);}, 4000); }
         
         
         //Resize Fcrousel
-        sizing($(this));
-        $( window ).resize( function () { sizing(fthis); });
+        size.width();
+        $( window ).resize( function () { size.width(); });
         
         //Border Radius Fcrousel Items
         $(this).find(".fcarousel-item").css('border-radius', settings.radius);
