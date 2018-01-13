@@ -35,10 +35,14 @@ export class items {
               {
                  link =  "https://www.youtube.com/embed/"+youtubeID(item.link);    
               }
-            if (item.domain === "vimeo.com" )
+            else if (item.domain === "vimeo.com" )
               {
                  link = "https://vimeo.com/"+vimeoID(item.link);
-              }  
+              } 
+             else
+             {
+                 link = item.link;
+             }
               
               return link;
     }

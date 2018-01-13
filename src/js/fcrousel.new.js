@@ -8,6 +8,8 @@ import {items} from './fcrousel.items.js';
 import {imageCrop} from './items/fcrousel.image.crop.js';
 import {image} from './items/fcrousel.image.js';
 import {videoLink} from './items/fcrousel.video.link.js';
+import {link} from './items/fcrousel.link.js';
+
 
 (function ( $ ) {
 
@@ -36,6 +38,10 @@ $.fn.fcarouselNew = function() {
     else  if (item.type === 'image' && item.imgcrop)
     {
         new imageCrop(item, fcrousel);
+    }
+    else if(item.type === 'link' )
+    {
+         new link(item, fcrousel);
     }
     else if(item.type === 'video-link' )
     {
