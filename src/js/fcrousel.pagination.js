@@ -4,10 +4,10 @@ export class pagination {
    fcarousel = null;
    move = false;
    
-   constructor(fcarousel, move=false)
+   constructor(fcarousel)
    {
        this.fcarousel = fcarousel;
-       this.move = move;
+       this.move = fcarousel.settings.move;
        	//Auto Move	
         this.startAutoMove();
    }

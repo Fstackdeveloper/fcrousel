@@ -1,7 +1,7 @@
 import {fitem} from './fcrousel.item.js';
 import {openNewTab} from '../fcrousel.functions.js';
 
-export class product extends fitem {
+export class offer extends fitem {
           
 
     
