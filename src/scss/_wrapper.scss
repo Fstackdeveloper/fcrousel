@@ -1,0 +1,47 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+.fcarousel 
+	{
+		min-height:100px;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: relative;
+                
+                    .fcarousel-outer
+                    {
+                        position: absolute;
+                        height: 100%;
+                        overflow: hidden;
+                        white-space:nowrap;  
+                        width: 100%;
+                        vertical-align: top;
+                        padding: 0;
+                        margin: 0;
+                        z-index: 50;
+                        left:0;
+                        
+                            .fcarousel-inner
+                            {
+                                position: absolute;
+                                height: 100%;
+                                display: inline;
+                                padding-right: 30px;
+                                padding-left: 30px;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                                margin: 0;
+                                left:0;
+                            }
+
+                    }
+
+	}
+        
+
+      

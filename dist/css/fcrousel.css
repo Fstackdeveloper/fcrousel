@@ -1,144 +1,272 @@
-.fcarousel 
-	{
-		min-height:300px;
-		width: 100%;
-		padding: 0;
-		margin: 0;
-		position: relative;
-	}
-.fcarousel-inner
-	{
-		position: absolute;
-		height: 100%;
-		overflow: hidden;
-		white-space:nowrap;  
-		width: 100%;
-		vertical-align: top;
-		padding: 0;
-		margin: 0;
-		z-index: 50;
-		left:0;
-	}
-.fcarousel-warp 
-	{
-		position: absolute;
-		height: 100%;
-		display: inline;
-		padding: 0;
-		margin: 0;
-		left:0;
-	}
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+/* Main */
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel {
+  min-height: 100px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+  .fcarousel .fcarousel-outer {
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    z-index: 50;
+    left: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner {
+      position: absolute;
+      height: 100%;
+      display: inline;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      left: 0; }
 
-.fcarousel-item
-	{
-		display: block;
-		float: left;
-		min-height: 300px;
-		overflow: hidden;
-		background-size: cover;
-		padding: 0;
-		margin-right: 3.3px;
-		margin-left: 3.3px;
-                margin-top: 0;
-		margin-bottom: 0;
-		width: 400px;
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-control-prev-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 89;
+  height: calc(100% - 0px);
+  width: 25px;
+  background: rgba(0, 0, 0, 0.9); }
+  .fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 5px;
+    z-index: 100; }
+    .fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev i {
+      color: #ffffff; }
 
-	}
+.fcarousel .fcarousel-control-next-wrapper {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 89;
+  height: calc(100% - 0px);
+  width: 25px;
+  background: rgba(0, 0, 0, 0.9); }
+  .fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 5px;
+    z-index: 100; }
+    .fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next i {
+      color: #ffffff; }
 
-	
-	
-	
-.fcarousel .fcarousel-control-prev
-{
-	position: absolute;
-	top: calc(50% - 12px);
-	left: 20px;
-	z-index: 100;	
-}
-	
-	
-.fcarousel .fcarousel-control-next
-{
-	position: absolute;
-	top: calc(50% - 12px);
-	right: 20px;
-	z-index: 100;	
-}
-	
-	
-	@media (max-width: 768px) {
-		
-		.fcarousel-item 
-	{
-		width: 100vw;
-		margin: 0;
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
+  float: left;
+  min-height: 100px;
+  overflow: hidden;
+  padding: 0;
+  margin-right: 3.3px;
+  margin-left: 3.3px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 400px;
+  box-sizing: border-box;
+  white-space: normal; }
+  @media (max-width: 768px) {
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
+      width: 100%; } }
 
-	}
+/* Items */
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .fcarousel-photo {
+    background-size: cover;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon:hover {
+      background: rgba(0, 0, 0, 0.7); }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon i {
+      color: #ffffff; }
 
-	}
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .fcarousel-photo {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover {
+      background: rgba(0, 0, 0, 0.7); }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i {
+      color: #ffffff; }
 
-        
-        
- 
-.fcarousel   .fcarousel-control-prev-wrapper
-{
-	position: absolute;
-        top: 0px;
-	left: 0;
-	z-index: 89;
-        height: calc(100% - 0px);
-        width:25px;
-        background: rgba(0, 0, 0, 0.7);
-}
-
-.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev
-{
-   left: 5px;
-}
-
-.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev  i 
-{
-    color: #ffffff !important;
-}
-	
-.fcarousel .fcarousel-control-next-wrapper
-{
-	position: absolute;
-        top: 0px;
-	right: 0;
-	z-index: 89;
-        height: calc(100% - 0px);
-        width:25px;
-        background: rgba(0, 0, 0, 0.7);
-}
-
-.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next  i 
-{
-    color: #ffffff;
-}
-
-.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next 
-{
-	right: 5px;
-    
-}
-
-
-
-@media (min-width: 769px) {
-    .fcarousel-warp
-    {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-    
-}
-
-@media (max-width: 768px) {
-		
-.fcarousel-item
-{
-    padding-right: 30px;
-    padding-left: 30px;
-}
-}
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link {
+  background-color: #ffffff;
+  border: #cccccc 1px solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp {
+    display: flex;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: #cccccc 1px solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .fcarousel-link-photo {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 7px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 40%;
+      border-bottom-right-radius: 40%; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop {
+    display: block;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .fcarousel-link-photo {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 7px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 40%;
+      border-bottom-right-radius: 40%; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-details {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-details .fcarousel-link-title {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-weight: bold;
+      width: 100%;
+      display: block;
+      font-size: 14px;
+      overflow: hidden;
+      margin: 0;
+      box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-details .fcarousel-link-desc {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 100%;
+      display: block;
+      font-size: 13px;
+      overflow: hidden;
+      white-space: normal;
+      margin: 0;
+      box-sizing: border-box; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-display-url {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-display-url span {
+      padding-right: 10px;
+      padding-left: 5px;
+      padding-bottom: 10px;
+      text-align: right;
+      font-size: 12px;
+      color: #ccc; }

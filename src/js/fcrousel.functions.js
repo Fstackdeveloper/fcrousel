@@ -1,3 +1,9 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
 
 // Generate Unique ID for Elemnts
 const uniqId = () => {
@@ -60,5 +66,11 @@ const extractRootDomain = (url) => {
 };
 
 
+const extension = (url) => {
+    return url.split(/\#|\?/)[0].split('.').pop().trim();
+};
 
-export {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain};
+
+
+
+export {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain, extension};

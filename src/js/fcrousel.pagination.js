@@ -1,3 +1,10 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
 export class pagination {
    waitAnimation = false;
    autoMove = null;
@@ -51,6 +58,18 @@ export class pagination {
         Hammer(this.fcarousel[ 0 ]).on("swiperight", function(e) 
             {
 		rootThis.next();
+            });
+            
+            this.fcarousel.find('img').each(function() {
+                Hammer($(this)[ 0 ]).on("swipeleft", function(e)
+                    {
+                        rootThis.prev();   
+                    });		
+
+                Hammer($(this)[ 0 ]).on("swiperight", function(e) 
+                    {
+                        rootThis.next();
+                    });     
             });
    }
    

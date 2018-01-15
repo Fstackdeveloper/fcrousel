@@ -1,0 +1,61 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+
+        
+        
+ 
+.fcarousel .fcarousel-control-prev-wrapper
+{
+	position: absolute;
+        top: 0px;
+	left: 0;
+	z-index: 89;
+        height: calc(100% - 0px);
+        width:25px;
+        background: rgba(0, 0, 0, 0.9);
+        
+            .fcarousel-control-prev
+            {
+                position: absolute;
+                top: calc(50% - 12px);
+                left: 5px;
+                z-index: 100;	
+                 
+                i 
+                    {
+                        color: #ffffff;
+                    }
+            }
+}
+
+	
+.fcarousel .fcarousel-control-next-wrapper
+{
+	position: absolute;
+        top: 0px;
+	right: 0;
+	z-index: 89;
+        height: calc(100% - 0px);
+        width:25px;
+        background: rgba(0, 0, 0, 0.9);
+        
+            .fcarousel-control-next
+            {
+                position: absolute;
+                top: calc(50% - 12px);
+                right: 5px;
+                z-index: 100;	
+               
+                i 
+                    {
+                        color: #ffffff;
+                    }
+
+            }
+
+}

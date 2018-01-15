@@ -1,10 +1,17 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
 import {uniqId} from './fcrousel.functions.js';
 
 export class setting {
     
         settings = {    // These are the defaults
-                      imgHeight: "auto",
-                      imgRatio: "1:1",
+                      imgheight: "auto",
+                      imgratio: "4:3",
                       imgcrop: false,
                       radius: '0',
                       move: false,
@@ -15,7 +22,7 @@ export class setting {
         constructor(data)
         {
              // This is the easiest way to have default options.
-             this.settings = $.extend(this.settings, data );  
+             this.settings = $.extend(this.settings, data );               
              this.generateUniqueID();
              this.imgRatio();
         }  
@@ -30,7 +37,7 @@ export class setting {
         
         imgRatio()
         {
-            this.settings.imgRatio = this.settings.imgRatio.split(":");
+            this.settings.imgRatio = this.settings.imgratio.split(":");
             this.settings.imgRatio[0] = Number(this.settings.imgRatio[0]);
             this.settings.imgRatio[1] = Number(this.settings.imgRatio[1]);
         }

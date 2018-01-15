@@ -1,0 +1,29 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item
+	{
+                float: left;
+		min-height: 100px;
+		overflow: hidden;
+		padding: 0;
+		margin-right: 3.3px;
+		margin-left: 3.3px;
+                margin-top: 0;
+		margin-bottom: 0;
+		width: 400px;
+                box-sizing: border-box;
+                white-space: normal;
+                
+                    @media (max-width: 768px) {
+                                width: 100%;
+                    }
+
+	}
+        
+

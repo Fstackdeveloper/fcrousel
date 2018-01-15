@@ -1,0 +1,160 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link
+ {
+     background-color: #ffffff;
+     border: #cccccc 1px solid;  
+     cursor: pointer;
+     display:flex;
+     flex-direction: column;
+        .fcarousel-link-photo-warp
+        {
+            display: flex;
+            min-height: 100px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border-bottom: #cccccc 1px solid;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            
+            .fcarousel-link-photo
+            {
+                max-height: 100%;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .photo-icon
+            {
+                position: absolute;
+                top: 0; left: 0;
+                padding: 7px;
+                background: rgba(0, 0, 0, 0.5);
+                border-top-right-radius: 40%;
+                border-bottom-right-radius: 40%;
+                
+                &:hover {
+                    background: rgba(0, 0, 0, 0.7);
+                }
+                
+                i {
+                    color: #ffffff;
+                  }
+
+            }
+
+        }
+        
+        
+        .fcarousel-link-photo-crop
+        {
+            display: block;
+            min-height: 100px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: relative;
+            
+            .fcarousel-link-photo
+            {
+                display: block;
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                margin: 0;
+            }
+
+            .photo-icon
+            {
+                position: absolute;
+                top: 0; left: 0;
+                padding: 7px;
+                background: rgba(0, 0, 0, 0.5);
+                border-top-right-radius: 40%;
+                border-bottom-right-radius: 40%;
+                
+                &:hover {
+                    background: rgba(0, 0, 0, 0.7);
+                }
+
+                
+                i {
+                    color: #ffffff;
+                }
+
+            }
+            
+        }
+        
+        
+        .fcarousel-link-details
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px; 
+            margin: 0;
+            box-sizing: border-box;
+                .fcarousel-link-title
+                {
+                    padding-top:7px;
+                    padding-bottom:7px;
+                    padding-left:5px;
+                    padding-right:5px;
+                    font-weight:bold;
+                    width:100%;
+                    display:block;
+                    font-size: 14px;
+                    overflow: hidden;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+                
+                .fcarousel-link-desc
+                {
+                    padding-left:5px;
+                    padding-right:5px;
+                    width:100%;
+                    display:block;
+                    font-size: 13px;
+                    overflow: hidden;
+                    white-space:normal;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
+
+        }
+        
+        .fcarousel-link-display-url
+        {
+            flex-grow: 1;
+            display: flex;
+            align-items:flex-end;
+            align-content:flex-end;
+            justify-content:flex-end;
+            flex-direction: row;
+            width:100%;
+            box-sizing: border-box;
+            
+            
+            span
+            {
+            padding-right:10px;
+            padding-left:5px;
+            padding-bottom:10px;
+            text-align:right;
+            font-size: 12px;
+            color:#ccc;
+            }
+        }
+        
+ }

@@ -1,0 +1,45 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop
+	{
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+                 padding: 0;
+                 position: relative;
+                
+                .fcarousel-photo
+                {    
+                    background-size: cover;
+                    display: block;
+                    width:100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                
+                .photo-icon
+                {
+                    position: absolute;
+                    top: 0; left: 0;
+                    padding: 7px;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-top-right-radius: 40%;
+                    border-bottom-right-radius: 40%;
+                    
+                    &:hover {
+                    background: rgba(0, 0, 0, 0.7);
+                    }
+
+                    i {
+                        color: #ffffff;
+                    }
+
+                }
+	}
