@@ -16,7 +16,7 @@ export class image extends fitem {
             {
                 this.html = `
                 <div class='fcarousel-item fcarousel-photo-warp photo-ratio' style="background:${this.item.background};border:${this.item.border};">
-                <div class="photo-icon"><i class="fa fa-picture-o fa-3x"></i></div>
+                <div class="photo-icon"><i class="icon-photos"></i></div>
                 <img class='fcarousel-photo' src='${this.item.image}'>
                 ${this.item.full_image ? 
                     `<a rel='fancybox_img_${this.item.fid}'  href='${this.item.full_image}' ></a>` 
@@ -28,7 +28,7 @@ export class image extends fitem {
             {
                 this.html = `
                 <div class='fcarousel-item fcarousel-photo-crop' style="background:${this.item.background};border:${this.item.border};" >
-                <div class="photo-icon"><i class="fa fa-picture-o fa-3x"></i></div>
+                <div class="photo-icon"><i class="icon-photos"></i></div>
                 <div class='fcarousel-photo photo-ratio' style='background:url("${this.item.image}");background-size: cover;'>
                 ${this.item.full_image ? 
                     `<a rel='fancybox_img_${this.item.fid}'  href='${this.item.full_image}' ></a>` 

@@ -45,7 +45,7 @@ export class design {
    {        
             let  paginationPrev = `<div class='fcarousel-control-prev-wrapper'>
                                    <a class='fcarousel-control-prev' href='javascript:' role='button' data-slide='prev'>
-                                   <i class='fa fa-chevron-left fa-lg'></i>
+                                   <i class='icon-left-arrow'></i>
                                    <span class='sr-only'>Previous</span>
                                    </a>
                                    </div>`;
@@ -54,7 +54,7 @@ export class design {
 
             var  paginationNext = `<div class='fcarousel-control-next-wrapper'>
                                    <a class='fcarousel-control-next' href='javascript:' role='button' data-slide='next'>
-                                   <i class='fa fa-chevron-right fa-lg'></i>
+                                   <i class='icon-right-arrow'></i>
                                    <span class='sr-only'>Next</span>
                                    </a>
                                    </div>`;

@@ -19,14 +19,14 @@ export class link extends fitem {
             ${this.item.imgcrop? 
              `
             <div class='fcarousel-link-photo-crop photo-ratio'> 
-            <div class="photo-icon"><i class="fa fa-link fa-3x"></i></div>
+            <div class="photo-icon"><i class="icon-link"></i></div>
             <div class='fcarousel-link-photo' style='background:url(${this.item.image});background-size: cover;'> 
 
             </div>
             </div>
             `:`        
             <div class='fcarousel-link-photo-warp photo-ratio'> 
-            <div class="photo-icon"><i class="fa fa-link fa-3x"></i></div>
+            <div class="photo-icon"><i class="icon-link"></i></div>
             <img class='fcarousel-link-photo' src='${this.item.image}'>
             </div>
             `
@@ -39,7 +39,10 @@ export class link extends fitem {
             <div class='fcarousel-link-title'>${this.item.title}</div>
             <div class='fcarousel-link-desc'>${this.item.description}</div>
             </div>
+            <div class='fcarousel-link-action'>
             <div class='fcarousel-link-display-url'> <span>${this.item.domain} </span></div>
+            <div class='fcarousel-link-display-button'><a  href='javascript:' >Learn More</a></div>
+            </div>
             </div>
             `;
         

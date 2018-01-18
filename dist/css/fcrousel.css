@@ -7,6 +7,50 @@
 /* Main */
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/c81d4bde461025c4f525eaab13c8090d.eot);
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/c81d4bde461025c4f525eaab13c8090d.eot#iefix) format("embedded-opentype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/9ceb97db53f7774a4ba1fcc8a505db78.ttf) format("truetype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/824314a31f43305074ba58a42a1b217c.woff) format("woff"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/678976483da9b1ba746d2f09f762ae9c.svg#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-left-arrow:before {
+  content: "\E900"; }
+
+.icon-right-arrow:before {
+  content: "\E901"; }
+
+.icon-play:before {
+  content: "\E902"; }
+
+.icon-photos:before {
+  content: "\E903"; }
+
+.icon-link:before {
+  content: "\E904"; }
+
+.icon-offer:before {
+  content: "\E905"; }
+
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
     Author     : Mohamed Almoelef
     Email      : info@fullstackdeveloper.org
     Website    : fullstackdeveloper.org
@@ -57,7 +101,8 @@
     position: absolute;
     top: calc(50% - 12px);
     left: 5px;
-    z-index: 100; }
+    z-index: 100;
+    text-decoration: none; }
     .fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev i {
       color: #ffffff; }
 
@@ -73,7 +118,8 @@
     position: absolute;
     top: calc(50% - 12px);
     right: 5px;
-    z-index: 100; }
+    z-index: 100;
+    text-decoration: none; }
     .fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next i {
       color: #ffffff; }
 
@@ -125,8 +171,10 @@
     left: 0;
     padding: 7px;
     background: rgba(0, 0, 0, 0.5);
-    border-top-right-radius: 40%;
-    border-bottom-right-radius: 40%; }
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    color: #ffffff;
+    font-size: 70px; }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon:hover {
       background: rgba(0, 0, 0, 0.7); }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon i {
@@ -155,8 +203,10 @@
     left: 0;
     padding: 7px;
     background: rgba(0, 0, 0, 0.5);
-    border-top-right-radius: 40%;
-    border-bottom-right-radius: 40%; }
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    color: #ffffff;
+    font-size: 70px; }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover {
       background: rgba(0, 0, 0, 0.7); }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i {
@@ -193,10 +243,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      padding: 7px;
+      padding: 10px;
       background: rgba(0, 0, 0, 0.5);
-      border-top-right-radius: 40%;
-      border-bottom-right-radius: 40%; }
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
       .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon:hover {
         background: rgba(0, 0, 0, 0.7); }
       .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon i {
@@ -218,10 +270,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      padding: 7px;
+      padding: 10px;
       background: rgba(0, 0, 0, 0.5);
-      border-top-right-radius: 40%;
-      border-bottom-right-radius: 40%; }
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
       .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon:hover {
         background: rgba(0, 0, 0, 0.7); }
       .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon i {
@@ -254,19 +308,37 @@
       white-space: normal;
       margin: 0;
       box-sizing: border-box; }
-  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-display-url {
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action {
     flex-grow: 1;
     display: flex;
     align-items: flex-end;
     align-content: flex-end;
-    justify-content: flex-end;
-    flex-direction: row;
-    width: 100%;
-    box-sizing: border-box; }
-    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-display-url span {
+    justify-content: flex-start;
+    flex-direction: row; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-bottom: 10px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url span {
+        font-size: 12px;
+        color: #ccc; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: right;
       padding-right: 10px;
       padding-left: 5px;
-      padding-bottom: 10px;
-      text-align: right;
-      font-size: 12px;
-      color: #ccc; }
+      padding-bottom: 15px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a {
+        font-size: 14px;
+        padding: 5px;
+        background-color: #f6f7f9;
+        border: #ced0d4 1px solid;
+        border-radius: 10%;
+        text-decoration: none;
+        color: #4b4f56; }
+        .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a:hover {
+          background-color: #d7dce5; }

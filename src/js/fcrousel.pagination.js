@@ -48,6 +48,7 @@ export class pagination {
    //Pagination By swipe (for Mobile) (Add Events)
    swipe()
    {
+     /*
        var rootThis = this;
       	//On Swipe Events (for Mobile)
 	Hammer(this.fcarousel[ 0 ]).on("swipeleft", function(e)
@@ -60,7 +61,7 @@ export class pagination {
 		rootThis.next();
             });
             
-            this.fcarousel.find('img').each(function() {
+            this.fcarousel.find('img, a').each(function() {
                 Hammer($(this)[ 0 ]).on("swipeleft", function(e)
                     {
                         rootThis.prev();   
@@ -71,6 +72,7 @@ export class pagination {
                         rootThis.next();
                     });     
             });
+            */
    }
    
 

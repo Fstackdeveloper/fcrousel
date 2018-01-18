@@ -11,6 +11,8 @@ export class fitem {
         item = null;
         html = null;
         itemElement = null;
+        ItemDragStart = false;
+        MouseX = 0;
         
         
         constructor(item, fcrousel)
@@ -20,6 +22,7 @@ export class fitem {
            this.htmlTemplate();
            this.insertToFcrousel();
            this.onClick();
+           this.onMouseDown();
         }
         
         
@@ -35,16 +38,61 @@ export class fitem {
         }
         
         
+        onMouseDown()
+        {
+            let rootThis = this;
+            this.itemElement.on("mousedown", function(e) {
+                rootThis.MouseX = e.clientX;
+                rootThis.onMouseMove();
+                rootThis.onMouseUp();
+            });
+        }
+        
+        
+         onMouseMove()
+         {
+            let rootThis = this;
+            this.itemElement.on("mousemove", function(e) {
+                if(e.which === 1) 
+                    {
+                        
+                        if(rootThis.MouseX === e.clientX)
+                        {
+                            rootThis.ItemDragStart = false;
+                        }
+                        else
+                        {
+                            rootThis.ItemDragStart = true;
+                        }
+                        
+                    }
+                
+            });
+         }
+         
+         
+         
+         onMouseUp()
+         {
+            let rootThis = this;
+            this.itemElement.on("mouseup", function(e) {
+                      $(this).off("mousemove");
+                      $(this).off("mouseup");
+            });
+         }
+        
         onClick()
         {
             let rootThis = this;
             this.itemElement.on('click', function(e) {
-                    e.preventDefault();
-                    if ($(this).find('a').length !== 0)
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    if ($(this).find('a').length !== 0 && rootThis.ItemDragStart === false)
                     {
                         rootThis.click($(this));
              
                     }
+                    rootThis.ItemDragStart = false;
 
             });
         }

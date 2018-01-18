@@ -37,6 +37,20 @@ module.exports = {
                 // use style-loader in development
                 fallback: "style-loader"
             })
+        },
+         { 
+            test:  /\.(png|jpg|svg|eot|ttf|woff)$/, 
+            loader: 'file-loader', 
+            options: {
+                    name (file) {
+                      if (process.env.NODE_ENV === 'development') {
+                        return '/media/[name].[ext]';
+                      }
+
+                      return '/media/[hash].[ext]';
+                    }
+                  }  
+
         }
       
     ] }

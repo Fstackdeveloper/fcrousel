@@ -67,7 +67,8 @@ export class items {
             item = $.extend(item, $(this).data());
             item.id = rootThis.fcarousel.settings.id + "-" +  uniqId();
             item.fid  = rootThis.fcarousel.settings.id;
-
+            item.order = index;
+            
             //Image Type
             if ($(this).prop("tagName") === 'IMG')
             {

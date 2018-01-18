@@ -42,6 +42,8 @@ export class sizing {
                 let height = 0;
                 this.fcarousel.css('height', 'auto');
                 this.fcarousel.find(".fcarousel-item").css('height', 'auto');
+                
+                let rootThis = this;
                 this.fcarousel.find(".fcarousel-item").each(function() 
                     {
                         let marginLeft =   Number($(this).css("marginLeft").replace('px', ''));
@@ -49,18 +51,23 @@ export class sizing {
                         if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1100px)").matches) {
                             $(this).css('width', (item_width_2 - (marginRight + marginLeft)) + "px");
                             $(this).find(".photo-ratio").eq(0).css('height', photo_height_2 + "px");
+                            rootThis.fcarousel['itemsPerPage'] = 2;
                             
                         }
                         else if (window.matchMedia("(min-width: 1100px)").matches)
                         {
                             $(this).css('width', (item_width_3 - (marginRight + marginLeft)) + "px");
                             $(this).find(".photo-ratio").eq(0).css('height', photo_height_3 + "px");
+                            rootThis.fcarousel['itemsPerPage'] = 3;
                         }
                         else 
                         {
                            $(this).css('width', (item_width_1 - (marginRight + marginLeft)) + "px");
                             $(this).find(".photo-ratio").eq(0).css('height', photo_height_1 + "px");
+                            rootThis.fcarousel['itemsPerPage'] = 1;
                         }
+                        
+                        
                         
                         if(Number($(this).css("height").replace('px', '')) > height)
                         {
@@ -74,6 +81,7 @@ export class sizing {
             this.fcarousel.css('height', (height + 1) + "px" );
             this.fcarousel.find(".fcarousel-item").css('height', height  + "px" );
             this.fcarousel.find( ".fcarousel-inner" ).width(fullWidth + 20);
+            
 
         };
         
