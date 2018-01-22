@@ -148,7 +148,8 @@
   box-sizing: border-box;
   white-space: normal;
   background-color: #ffffff;
-  border: #cccccc 1px solid; }
+  border: #cccccc 1px solid;
+  border-radius: 5px; }
   @media (max-width: 768px) {
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
       width: 100%; } }
@@ -227,8 +228,6 @@
     Website    : fullstackdeveloper.org
 */
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link {
-  background-color: #ffffff;
-  border: #cccccc 1px solid;
   cursor: pointer;
   display: flex;
   flex-direction: column; }
@@ -358,8 +357,6 @@
     Website    : fullstackdeveloper.org
 */
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer {
-  background-color: #ffffff;
-  border: #cccccc 1px solid;
   cursor: pointer;
   display: flex;
   flex-direction: column; }
@@ -532,8 +529,6 @@
     Website    : fullstackdeveloper.org
 */
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product {
-  background-color: #ffffff;
-  border: #cccccc 1px solid;
   cursor: pointer;
   display: flex;
   flex-direction: column; }
@@ -701,3 +696,21 @@
         color: #4b4f56; }
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover {
           background-color: #d7dce5; }
+
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Almoelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel-block .fcarousel-block-header {
+  border-bottom: #ccc solid 1px;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+  background: #ccc;
+  color: #fff; }
+
+.fcarousel-block .fcarousel-block-body {
+  font-size: 20px;
+  padding: 10px; }

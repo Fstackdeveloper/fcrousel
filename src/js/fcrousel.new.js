@@ -19,7 +19,7 @@ import {link} from './items/fcrousel.link.js';
 import {product} from './items/fcrousel.product.js';
 import {html} from './items/fcrousel.html.js';
 import {offer} from './items/fcrousel.offer.js';
-
+import {block} from './items/fcrousel.block.js';
 
 
 (function ( $ ) {
@@ -66,6 +66,10 @@ $.fn.fcarouselNew = function() {
     else if(item.type === 'html' )
     {
          new html(item, fcrousel);
+    }
+    else if(item.type === 'block' )
+    {
+         new block(item, fcrousel);
     }
 
 });

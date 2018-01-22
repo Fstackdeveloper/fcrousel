@@ -95,6 +95,9 @@ export class items {
             
             //HTML
             item.html = itemElm.html();
+            
+            //block
+            item.body = itemElm.find("[data-body]")?itemElm.find("[data-body]").eq(0).html():null;
         
         return item;
     }
