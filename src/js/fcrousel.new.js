@@ -5,6 +5,7 @@
     Website    : fullstackdeveloper.org
 */
 
+import  './fcrousel.prototype.js';
 import {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain} from './fcrousel.functions.js';
 import {sizing} from './fcrousel.sizing.js';
 import {pagination} from './fcrousel.pagination.js';
@@ -12,11 +13,11 @@ import {design} from './fcrousel.design.js';
 import {setting} from './fcrousel.setting.js';
 import {items} from './fcrousel.items.js';
 import {image} from './items/fcrousel.image.js';
-import {videoLink} from './items/fcrousel.video.link.js';
+import {embedVideo} from './items/fcrousel.embed.video.js';
 import {video} from './items/fcrousel.video.js';
 import {link} from './items/fcrousel.link.js';
 import {product} from './items/fcrousel.product.js';
-import {service} from './items/fcrousel.service.js';
+import {html} from './items/fcrousel.html.js';
 import {offer} from './items/fcrousel.offer.js';
 
 
@@ -46,9 +47,9 @@ $.fn.fcarouselNew = function() {
     {
          new link(item, fcrousel);
     }
-    else if(item.type === 'video-link' )
+    else if(item.type === 'embed-video' )
     {
-         new videoLink(item, fcrousel);
+         new embedVideo(item, fcrousel);
     }
     else if(item.type === 'video' )
     {
@@ -62,8 +63,11 @@ $.fn.fcarouselNew = function() {
     {
          new offer(item, fcrousel);
     }
+    else if(item.type === 'html' )
+    {
+         new html(item, fcrousel);
+    }
 
-    
 });
 
 

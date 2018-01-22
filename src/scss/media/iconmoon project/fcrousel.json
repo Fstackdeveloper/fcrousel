@@ -10,32 +10,50 @@
         {
           "order": 10,
           "id": 5,
-          "name": "left-arrow"
+          "name": "left-arrow",
+          "prevSize": 32,
+          "code": 59648,
+          "tempChar": ""
         },
         {
           "order": 9,
           "id": 4,
-          "name": "right-arrow"
+          "name": "right-arrow",
+          "prevSize": 32,
+          "code": 59649,
+          "tempChar": ""
         },
         {
           "order": 8,
           "id": 3,
-          "name": "play"
+          "name": "play",
+          "prevSize": 32,
+          "code": 59650,
+          "tempChar": ""
         },
         {
           "order": 7,
           "id": 2,
-          "name": "photos"
+          "name": "photos",
+          "prevSize": 32,
+          "code": 59651,
+          "tempChar": ""
         },
         {
           "order": 6,
           "id": 1,
-          "name": "link"
+          "name": "link",
+          "prevSize": 32,
+          "code": 59652,
+          "tempChar": ""
         },
         {
           "order": 5,
           "id": 0,
-          "name": "offer"
+          "name": "offer",
+          "prevSize": 32,
+          "code": 59653,
+          "tempChar": ""
         }
       ],
       "id": 2,
@@ -514,8 +532,11 @@
         {
           "ligatures": "cart, purchase",
           "name": "cart",
-          "order": 0,
-          "id": 59
+          "order": 12,
+          "id": 59,
+          "prevSize": 32,
+          "code": 59706,
+          "tempChar": ""
         },
         {
           "ligatures": "coin-dollar, money",
@@ -1792,8 +1813,11 @@
         {
           "ligatures": "cross, cancel",
           "name": "cross",
-          "order": 0,
-          "id": 272
+          "order": 11,
+          "id": 272,
+          "prevSize": 32,
+          "code": 59919,
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark, tick",
@@ -10616,14 +10640,18 @@
     "fontPref": {
       "prefix": "icon-",
       "metadata": {
-        "fontFamily": "icomoon"
+        "fontFamily": "icomoon",
+        "majorVersion": 1,
+        "minorVersion": 0
       },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
       },
-      "embed": false
+      "embed": false,
+      "ie7": false,
+      "noie8": false
     },
     "imagePref": {
       "prefix": "icon-",
@@ -10637,6 +10665,5 @@
     "showCodes": true,
     "gridSize": 16
   },
-  "uid": -1,
-  "time": 1516093645770
+  "uid": -1
 }

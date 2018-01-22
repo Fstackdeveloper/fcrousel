@@ -19,22 +19,27 @@ export class items {
         
      
      
-     fcrouselType(item)
+     itemType(item)
      {
-            let type;
-            if (item.domain === "youtube.com" || item.domain === "youtu.be" || item.domain === "vimeo.com"  )
-              {
-               type = item.type || "video-link";
-              }
-             else if ($.inArray(item.extension, ['mp4','webm','ogv','ogg']) !== -1)
-             {
-               type = item.type || "video";
-             }
-             else
-             {
-               type = item.type || "link";
-             }
-              return type;
+         if(item.type)
+         {
+             return item.type;
+         }
+         
+        let type;
+        if (item.domain === "youtube.com" || item.domain === "youtu.be" || item.domain === "vimeo.com"  )
+          {
+           type = item.type || "embed-video";
+          }
+         else if ($.inArray(item.extension, ['mp4','webm','ogv','ogg']) !== -1)
+         {
+           type = item.type || "video";
+         }
+         else
+         {
+           type = item.type || "link";
+         }
+          return type;
 
          
      }
@@ -57,6 +62,59 @@ export class items {
               
               return link;
     }
+    
+    
+    
+    image(itemElm)
+    {
+      let item = {};
+      item.image =  itemElm.attr('src');
+      
+      return item;
+    }
+    
+    divData(itemElm)
+    {
+        let item = {};
+        
+            //For Links, Video, Embed Video
+            item.image = itemElm.find("[data-image]")?itemElm.find("[data-image]").eq(0).attr('src'):null;
+            item.link = itemElm.find("[data-link]")?itemElm.find("[data-link]").eq(0).attr('href'):null;
+            item.domain = item.link?extractRootDomain(item.link):null; 
+            item.extension = item.link?extension(item.link):null; 
+            item.title = itemElm.find("[data-title]")?itemElm.find("[data-title]").eq(0).text():null;
+            item.description =  itemElm.find("[data-description]")?itemElm.find("[data-description]").eq(0).text():null;
+            item.link = this.fcrouselLink(item);
+
+
+            //For Offers
+            item.price = itemElm.find("[data-price]")?itemElm.find("[data-price]").eq(0).text():null;
+            item.price_before = itemElm.find("[data-price_before]")?itemElm.find("[data-price_before]").eq(0).text():null;
+            item.offer_end = itemElm.find("[data-offer_end]")?itemElm.find("[data-offer_end]").eq(0).text():null;
+            
+            
+            //HTML
+            item.html = itemElm.html();
+        
+        return item;
+    }
+        
+    
+    div(itemElm)
+    {
+        var item = {};
+        var getItem = {};
+        getItem = $.extend(getItem, this.divData(itemElm));
+        for(var key in getItem){
+            if(getItem[key])
+            {
+                item[key] = getItem[key];
+            }   
+        }
+
+        return item;
+    }
+        
         
      fcarouselItems()
      {
@@ -73,18 +131,13 @@ export class items {
             if ($(this).prop("tagName") === 'IMG')
             {
                item.type = "image";
-               item.image =  $(this).attr('src') || item.image ;
+               item = $.extend(item, rootThis.image($(this)));
+               
             }
             else if ($(this).prop("tagName") === 'DIV')
             {
-                item.image = $(this).find("[data-image]").eq(0).attr('src') || rootThis.fitems[index].image;
-                item.link = $(this).find("[data-link]").eq(0).attr('href') || item.link;
-                item.domain = extractRootDomain(item.link); 
-                item.extension = extension(item.link); 
-                item.title = $(this).find("[data-title]").eq(0).text() || item.title;
-                item.description =  $(this).find("[data-description]").eq(0).text() || item.description;
-                item.link = rootThis.fcrouselLink(item);
-                item.type = rootThis.fcrouselType(item);
+                item = $.extend(item, rootThis.div($(this)));
+                item.type = rootThis.itemType(item);
             }
             $(this).remove();
             rootThis.fitems.push(item);

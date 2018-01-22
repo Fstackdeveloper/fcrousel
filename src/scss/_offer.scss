@@ -6,14 +6,14 @@
 */
 
 
-.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer
  {
      background-color: #ffffff;
      border: #cccccc 1px solid;  
      cursor: pointer;
      display:flex;
      flex-direction: column;
-        .fcarousel-link-photo-warp
+        .fcarousel-offer-photo-warp
         {
             display: flex;
             min-height: 100px;
@@ -27,7 +27,7 @@
             position: relative;
 
             
-            .fcarousel-link-photo
+            .fcarousel-offer-photo
             {
                 max-height: 100%;
                 max-width: 100%;
@@ -38,11 +38,12 @@
             {
                 position: absolute;
                 top: 0; left: 0;
-                padding: 7px;
+                padding: 10px;
                 background: rgba(0, 0, 0, 0.5);
-                border-top-right-radius: 40%;
-                border-bottom-right-radius: 40%;
-                
+                border-top-right-radius: 20%;
+                border-bottom-right-radius: 20%;
+                color: #ffffff;
+                font-size: 70px;
                 &:hover {
                     background: rgba(0, 0, 0, 0.7);
                 }
@@ -56,7 +57,7 @@
         }
         
         
-        .fcarousel-link-photo-crop
+        .fcarousel-offer-photo-crop
         {
             display: block;
             min-height: 100px;
@@ -65,7 +66,7 @@
             width: 100%;
             position: relative;
             
-            .fcarousel-link-photo
+            .fcarousel-offer-photo
             {
                 display: block;
                 height: 100%;
@@ -78,10 +79,12 @@
             {
                 position: absolute;
                 top: 0; left: 0;
-                padding: 7px;
+                padding: 10px;
                 background: rgba(0, 0, 0, 0.5);
-                border-top-right-radius: 40%;
-                border-bottom-right-radius: 40%;
+                border-top-right-radius: 20%;
+                border-bottom-right-radius: 20%;
+                color: #ffffff;
+                font-size: 70px;
                 
                 &:hover {
                     background: rgba(0, 0, 0, 0.7);
@@ -97,14 +100,14 @@
         }
         
         
-        .fcarousel-link-details
+        .fcarousel-offer-details
         {
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 10px; 
             margin: 0;
             box-sizing: border-box;
-                .fcarousel-link-title
+                .fcarousel-offer-title
                 {
                     padding-top:7px;
                     padding-bottom:7px;
@@ -113,19 +116,19 @@
                     font-weight:bold;
                     width:100%;
                     display:block;
-                    font-size: 14px;
+                    font-size: 20px;
                     overflow: hidden;
                     margin: 0;
                     box-sizing: border-box;
                 }
                 
-                .fcarousel-link-desc
+                .fcarousel-offer-desc
                 {
                     padding-left:5px;
                     padding-right:5px;
                     width:100%;
                     display:block;
-                    font-size: 13px;
+                    font-size: 18px;
                     overflow: hidden;
                     white-space:normal;
                     margin: 0;
@@ -134,27 +137,136 @@
 
         }
         
-        .fcarousel-link-display-url
+        
+        
+        .fcarousel-offer-price
+        {
+                display: flex;
+                align-items:center;
+                align-content:center;
+                justify-content:center;
+                flex-direction: row;
+                font-size: 20px;
+                font-weight: bold;
+                color: #ffffff;
+                
+
+            .fcarousel-offer-price-before
+            {
+                background-color: red;
+                text-decoration: line-through;
+                text-decoration-color: green;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 5px;
+                width:50%;
+            }
+            .fcarousel-offer-price-now
+            {
+                background-color: green;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 5px;
+                width:50%;
+
+            }
+        }
+        
+        
+        
+        .fcarousel-offer-end
+        {
+            .fcarousel-offer-end-title
+            {
+                background: #000000;
+                color: #ffffff;
+                font-size: 20px;
+                text-align: center;
+                padding: 5px;
+            }
+            .fcarousel-offer-end-time
+            {
+                display: flex;
+                align-items:center;
+                align-content:center;
+                justify-content:center;
+                flex-direction: row;
+                background: #000000;
+                color: #ffffff;
+                font-size: 20px;
+
+                div {
+                    padding: 5px;
+
+                    span {
+                        padding-left: 3px;
+                        padding-right: 3px;
+                    }
+                }
+
+            }
+            
+        }
+        
+        
+        
+        
+        
+        .fcarousel-offer-action
         {
             flex-grow: 1;
             display: flex;
             align-items:flex-end;
             align-content:flex-end;
-            justify-content:flex-end;
+            justify-content:flex-start;
             flex-direction: row;
-            width:100%;
+
+        .fcarousel-offer-display-url
+        {
+            width:50%;
             box-sizing: border-box;
-            
+            text-align:left;
+            padding-left:10px;
+            padding-right:5px;
+            padding-bottom:10px;
+
             
             span
             {
-            padding-right:10px;
-            padding-left:5px;
-            padding-bottom:10px;
-            text-align:right;
             font-size: 12px;
             color:#ccc;
             }
+        }
+        
+        
+        .fcarousel-offer-display-button
+        {
+            width:50%;
+            box-sizing: border-box;
+            text-align:right;
+            padding-right:10px;
+            padding-left:5px;
+            padding-bottom:15px;
+
+            
+            a {
+                font-size: 20px;
+                padding: 5px;
+                background-color: #f6f7f9;
+                border: rgb(206, 208, 212) 1px solid;
+                border-radius: 10%;
+                text-decoration: none;
+                color: #4b4f56;
+                
+                &:hover {
+                    background-color: darken(#f6f7f9, 10%);
+                }
+            }
+            
+            
+
+        }
+        
         }
         
  }

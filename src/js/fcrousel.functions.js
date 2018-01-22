@@ -71,6 +71,4 @@ const extension = (url) => {
 };
 
 
-
-
 export {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain, extension};

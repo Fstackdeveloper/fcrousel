@@ -13,8 +13,8 @@
 */
 @font-face {
   font-family: 'icomoon';
-  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/c81d4bde461025c4f525eaab13c8090d.eot);
-  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/c81d4bde461025c4f525eaab13c8090d.eot#iefix) format("embedded-opentype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/9ceb97db53f7774a4ba1fcc8a505db78.ttf) format("truetype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/824314a31f43305074ba58a42a1b217c.woff) format("woff"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/678976483da9b1ba746d2f09f762ae9c.svg#icomoon) format("svg");
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/8d21e6f8bb891e733cb6ec5eb186f6d4.eot);
+  src: url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/8d21e6f8bb891e733cb6ec5eb186f6d4.eot#iefix) format("embedded-opentype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/89a0139e52aab99e26cc44704c3c4430.ttf) format("truetype"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/d3373d522304b2b331ccd248b5bb2724.woff) format("woff"), url(/Users/mohamedalmoelef/NetBeansProjects/fcrousel/public_html/fcrousel/dist/media/33c062983e8bd3abee63cac6caac520a.svg#icomoon) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -48,6 +48,12 @@
 
 .icon-offer:before {
   content: "\E905"; }
+
+.icon-cross:before {
+  content: "\EA0F"; }
+
+.icon-cart:before {
+  content: "\E93A"; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -140,7 +146,9 @@
   margin-bottom: 0;
   width: 400px;
   box-sizing: border-box;
-  white-space: normal; }
+  white-space: normal;
+  background-color: #ffffff;
+  border: #cccccc 1px solid; }
   @media (max-width: 768px) {
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
       width: 100%; } }
@@ -294,7 +302,7 @@
       font-weight: bold;
       width: 100%;
       display: block;
-      font-size: 14px;
+      font-size: 20px;
       overflow: hidden;
       margin: 0;
       box-sizing: border-box; }
@@ -303,7 +311,7 @@
       padding-right: 5px;
       width: 100%;
       display: block;
-      font-size: 13px;
+      font-size: 18px;
       overflow: hidden;
       white-space: normal;
       margin: 0;
@@ -333,7 +341,7 @@
       padding-left: 5px;
       padding-bottom: 15px; }
       .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a {
-        font-size: 14px;
+        font-size: 20px;
         padding: 5px;
         background-color: #f6f7f9;
         border: #ced0d4 1px solid;
@@ -341,4 +349,355 @@
         text-decoration: none;
         color: #4b4f56; }
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a:hover {
+          background-color: #d7dce5; }
+
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer {
+  background-color: #ffffff;
+  border: #cccccc 1px solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp {
+    display: flex;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: #cccccc 1px solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .fcarousel-offer-photo {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop {
+    display: block;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .fcarousel-offer-photo {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-details {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-details .fcarousel-offer-title {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-weight: bold;
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      overflow: hidden;
+      margin: 0;
+      box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-details .fcarousel-offer-desc {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 100%;
+      display: block;
+      font-size: 18px;
+      overflow: hidden;
+      white-space: normal;
+      margin: 0;
+      box-sizing: border-box; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-price {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-price .fcarousel-offer-price-before {
+      background-color: red;
+      text-decoration: line-through;
+      text-decoration-color: green;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 5px;
+      width: 50%; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-price .fcarousel-offer-price-now {
+      background-color: green;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 5px;
+      width: 50%; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title {
+    background: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    background: #000000;
+    color: #ffffff;
+    font-size: 20px; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div {
+      padding: 5px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div span {
+        padding-left: 3px;
+        padding-right: 3px; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-start;
+    flex-direction: row; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-url {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-bottom: 10px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-url span {
+        font-size: 12px;
+        color: #ccc; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: right;
+      padding-right: 10px;
+      padding-left: 5px;
+      padding-bottom: 15px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a {
+        font-size: 20px;
+        padding: 5px;
+        background-color: #f6f7f9;
+        border: #ced0d4 1px solid;
+        border-radius: 10%;
+        text-decoration: none;
+        color: #4b4f56; }
+        .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover {
+          background-color: #d7dce5; }
+
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product {
+  background-color: #ffffff;
+  border: #cccccc 1px solid;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp {
+    display: flex;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: #cccccc 1px solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .fcarousel-product-photo {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .fcarousel-product-price {
+      display: flex;
+      position: absolute;
+      bottom: 20px;
+      right: 20px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .fcarousel-product-price .fcarousel-product-now {
+        padding: 10px;
+        border-radius: 40%;
+        background: green;
+        opacity: 0.7;
+        color: #ffffff;
+        font-size: 30px;
+        margin: 3px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .fcarousel-product-price .fcarousel-product-before {
+        padding: 10px;
+        border-radius: 40%;
+        background: red;
+        opacity: 0.7;
+        color: #ffffff;
+        font-size: 30px;
+        margin: 3px;
+        text-decoration: line-through;
+        text-decoration-color: green; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop {
+    display: block;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-photo {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      margin: 0; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-price {
+      display: flex;
+      position: absolute;
+      bottom: 20px;
+      right: 20px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-price .fcarousel-product-now {
+        padding: 10px;
+        border-radius: 40%;
+        background: green;
+        opacity: 0.7;
+        color: #ffffff;
+        font-size: 30px;
+        margin: 3px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-price .fcarousel-product-before {
+        padding: 10px;
+        border-radius: 40%;
+        background: red;
+        opacity: 0.7;
+        color: #ffffff;
+        font-size: 30px;
+        margin: 3px;
+        text-decoration: line-through;
+        text-decoration-color: green; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      color: #ffffff;
+      font-size: 70px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon:hover {
+        background: rgba(0, 0, 0, 0.7); }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon i {
+        color: #ffffff; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details .fcarousel-product-title {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-weight: bold;
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      overflow: hidden;
+      margin: 0;
+      box-sizing: border-box; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details .fcarousel-product-desc {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 100%;
+      display: block;
+      font-size: 18px;
+      overflow: hidden;
+      white-space: normal;
+      margin: 0;
+      box-sizing: border-box; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-start;
+    flex-direction: row; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: left;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-bottom: 10px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url span {
+        font-size: 12px;
+        color: #ccc; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button {
+      width: 50%;
+      box-sizing: border-box;
+      text-align: right;
+      padding-right: 10px;
+      padding-left: 5px;
+      padding-bottom: 15px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a {
+        font-size: 20px;
+        padding: 5px;
+        background-color: #f6f7f9;
+        border: #ced0d4 1px solid;
+        border-radius: 10%;
+        text-decoration: none;
+        color: #4b4f56; }
+        .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover {
           background-color: #d7dce5; }

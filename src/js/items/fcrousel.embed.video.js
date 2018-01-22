@@ -6,7 +6,7 @@
 */
 
 import {fitem} from './fcrousel.item.js';
-export class videoLink extends fitem {
+export class embedVideo extends fitem {
           
 
     
