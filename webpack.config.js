@@ -12,7 +12,7 @@ const extractSass = new ExtractTextPlugin({
 
 
 module.exports = {
-  entry: ['./src/js/fcrousel.new.js','./src/scss/fcrousel.new.scss'],
+  entry: ['./src/js/fcrousel.js','./src/scss/fcrousel.scss'],
   output: {
     filename: './js/fcrousel.js',
     path: path.resolve(__dirname, 'dist/'),
