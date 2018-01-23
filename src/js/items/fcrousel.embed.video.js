@@ -39,7 +39,7 @@ export class embedVideo extends fitem {
             </div>
             <div class='fcarousel-link-action'>
             <div class='fcarousel-link-display-url'> <span>${this.item.domain} </span></div>
-            <div class='fcarousel-link-display-button'><a  href='javascript:' >Watch</a></div>
+            <div class='fcarousel-link-display-button'><a  href='javascript:' >${this.item.button?this.item.button:this.fcrousel.lang.watch}</a></div>
             </div>
             </div>
             `;

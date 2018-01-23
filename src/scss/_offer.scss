@@ -63,6 +63,7 @@
             padding: 0;
             width: 100%;
             position: relative;
+            border-bottom: #cccccc 1px solid;
             
             .fcarousel-offer-photo
             {
@@ -174,6 +175,9 @@
         
         .fcarousel-offer-end
         {
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+             
             .fcarousel-offer-end-title
             {
                 background: #000000;
@@ -288,6 +292,22 @@
                         border-bottom-right-radius: 0;
                     }
             }
+            
+            
+            
+            .fcarousel-offer-action
+            {
+                .fcarousel-offer-display-url
+                {
+                    text-align:right;
+                }        
+                .fcarousel-offer-display-button
+                {
+                    text-align:left;           
+                }
+            }
+
+
 
         
         }

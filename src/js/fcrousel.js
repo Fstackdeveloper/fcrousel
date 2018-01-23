@@ -20,6 +20,8 @@ import {product} from './items/fcrousel.product.js';
 import {html} from './items/fcrousel.html.js';
 import {offer} from './items/fcrousel.offer.js';
 import {block} from './items/fcrousel.block.js';
+import {language} from './languages/fcrousel.language.js';
+
 
 
 (function ( $ ) {
@@ -30,6 +32,7 @@ $.fn.fcarouselNew = function() {
  var fcrousel = $(this);
  fcrousel.settings = new setting($(this).data()).get();
  fcrousel.items =  (new items(fcrousel)).get();
+ fcrousel.lang = new language(fcrousel);
  var size = new sizing(fcrousel);
  var fdesign = new design(fcrousel);
  fdesign.buttonsWithWarpper();

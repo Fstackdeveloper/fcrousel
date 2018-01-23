@@ -97,6 +97,7 @@
             padding: 0;
             width: 100%;
             position: relative;
+            border-bottom: #cccccc 1px solid;
             
             .fcarousel-product-photo
             {
@@ -279,6 +280,12 @@
 
             .fcarousel-product-photo-warp, .fcarousel-product-photo-crop
             {
+                
+                .fcarousel-product-price
+                {
+                    left: 20px;
+                    right: auto;
+                }
                 .photo-icon
                     {
                         right: 0;
@@ -289,6 +296,27 @@
                         border-bottom-right-radius: 0;
                     }
             }
-
+            
+            
+            
+            
+            
+            
+            .fcarousel-product-action
+            {
+                .fcarousel-product-display-url
+                {
+                    text-align:right;
+                }        
+                .fcarousel-product-display-button
+                {
+                    text-align:left;           
+                }
+            }        
+        
+        
         
         }
+        
+
+        

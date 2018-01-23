@@ -70,7 +70,7 @@ export class product extends fitem {
             </div>
             <div class='fcarousel-product-action'>
             <div class='fcarousel-product-display-url'> <span>${this.item.domain} </span></div>
-            <div class='fcarousel-product-display-button'><a  href='${this.item.link}' >Buy</a></div>
+            <div class='fcarousel-product-display-button'><a  href='${this.item.link}' >${this.item.button?this.item.button:this.fcrousel.lang.buy}</a></div>
             </div>
             </div>
             `;

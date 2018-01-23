@@ -16,6 +16,7 @@ export class offer extends fitem {
         {
             
             this.CountDownTimer(this.item.offer_end, "offer_"+this.item.id);
+            this.checkExpired();
             
             this.html = `
             <div class='fcarousel-item fcarousel-offer'>
@@ -51,13 +52,13 @@ export class offer extends fitem {
             
             <div id="offer_${this.item.id}" class="fcarousel-offer-end">
             <div class="fcarousel-offer-end-title">
-            Offer End
+             ${this.fcrousel.lang.offer_end}
             </div>
             <div class="fcarousel-offer-end-time">
-            <div class="days"> <span></span> Days</div>
-            <div class="hours"> <span></span> hrs</div>
-            <div class="minutes"> <span></span> mins</div>
-            <div class="seconds"> <span></span> secs</div>
+            <div class="days"> <span></span> ${this.fcrousel.lang.days}</div>
+            <div class="hours"> <span></span> ${this.fcrousel.lang.hours}</div>
+            <div class="minutes"> <span></span> ${this.fcrousel.lang.minutes}</div>
+            <div class="seconds"> <span></span> ${this.fcrousel.lang.seconds}</div>
             </div>
             </div>
             <div class='fcarousel-offer-details'>
@@ -66,7 +67,9 @@ export class offer extends fitem {
             </div>
             <div class='fcarousel-offer-action'>
             <div class='fcarousel-offer-display-url'> <span>${this.item.domain} </span></div>
-            <div class='fcarousel-offer-display-button'><a  href='${this.item.link}' >Get Offer</a></div>
+           ${!this.item.expired? 
+           `<div class='fcarousel-offer-display-button'><a  href='${this.item.link}' >${this.item.button?this.item.button:this.fcrousel.lang.get_offer}</a></div>`
+           :''}
             </div>
             </div>
             `;
@@ -77,8 +80,22 @@ export class offer extends fitem {
         
         click(element)
         {
-                  
+               if (!this.item.expired)
+               {
                   openNewTab(this.item.link);
+               }
+        }
+        
+        
+        
+        checkExpired()
+        {
+            var end = new Date(this.item.offer_end);            
+            var now = new Date();
+            var distance = end - now;
+                if (distance < 0) {
+                    this.item['expired'] = true;    
+                }
         }
         
         
@@ -92,6 +109,7 @@ export class offer extends fitem {
             var _hour = _minute * 60;
             var _day = _hour * 24;
             var timer;
+            var rootThis =this;
 
             function showRemaining() {
                 var now = new Date();
@@ -99,7 +117,7 @@ export class offer extends fitem {
                 if (distance < 0) {
 
                     clearInterval(timer);
-                    document.getElementById(id).innerHTML = '<div class="fcarousel-offer-end-title">EXPIRED!</div>';
+                    document.getElementById(id).innerHTML = '<div class="fcarousel-offer-end-title">'+rootThis.fcrousel.lang.expired+'</div>';
 
                     return;
                 }

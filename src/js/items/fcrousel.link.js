@@ -41,7 +41,7 @@ export class link extends fitem {
             </div>
             <div class='fcarousel-link-action'>
             <div class='fcarousel-link-display-url'> <span>${this.item.domain} </span></div>
-            <div class='fcarousel-link-display-button'><a  href='javascript:' >Learn More</a></div>
+            <div class='fcarousel-link-display-button'><a  href='javascript:' >${this.item.button?this.item.button:this.fcrousel.lang.learn_more}</a></div>
             </div>
             </div>
             `;

@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "css/fcrousel.css",
+    filename: "[name]",
     disable: process.env.NODE_ENV === "development"
 });
 
@@ -12,9 +12,18 @@ const extractSass = new ExtractTextPlugin({
 
 
 module.exports = {
-  entry: ['./src/js/fcrousel.js','./src/scss/fcrousel.scss'],
+  entry: {'js/fcrousel.js': [
+      './src/js/fcrousel.js'
+    ],'css/fcrousel.css': [
+      './src/scss/fcrousel.scss'
+    ],'css/fcrousel.blue.css': [
+      './src/scss/blue.scss'
+    ],'css/fcrousel.red.css': [
+      './src/scss/red.scss'
+    ]
+    },
   output: {
-    filename: './js/fcrousel.js',
+    filename: './[name]',
     path: path.resolve(__dirname, 'dist/'),
     publicPath:path.resolve(__dirname, 'dist')
   },

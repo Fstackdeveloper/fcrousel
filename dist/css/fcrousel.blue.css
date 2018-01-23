@@ -1,0 +1,77 @@
+/* 
+    Created on : Jan 14, 2018, 8:40:09 PM
+    Author     : Mohamed Al Moelef
+    Email      : info@fullstackdeveloper.org
+    Website    : fullstackdeveloper.org
+*/
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
+  border-color: #1e9cd7;
+  color: #1e9cd7; }
+
+.fcarousel .fcarousel-control-prev-wrapper, .fcarousel .fcarousel-control-next-wrapper {
+  background-color: #1e9cd7; }
+
+.fcarousel-block .fcarousel-block-header {
+  background-color: #1e9cd7; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-block .fcarousel-block-header {
+  border-bottom-color: #1e9cd7; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon {
+  background-color: #1e9cd7;
+  opacity: 0.7; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon:hover {
+    background-color: #1e9cd7;
+    opacity: 1; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-details,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-details {
+  color: #1e9cd7; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a {
+  background-color: #e0f2fb;
+  color: #1e9cd7;
+  border-color: #1e9cd7; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover {
+    background-color: #70c4eb;
+    color: #ffffff; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url span,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url span,
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-url span {
+  color: #9dd6f1; }
+
+.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end {
+  border-top-color: #1e9cd7;
+  border-bottom-color: #1e9cd7; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title {
+    background: #e0f2fb;
+    color: #1e9cd7; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time {
+    background: #e0f2fb;
+    color: #1e9cd7; }

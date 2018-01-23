@@ -63,6 +63,7 @@
             padding: 0;
             width: 100%;
             position: relative;
+            border-bottom: #cccccc 1px solid;
             
             .fcarousel-link-photo
             {
@@ -215,6 +216,20 @@
                         border-bottom-right-radius: 0;
                     }
             }
+            
+            
+            .fcarousel-link-action
+            {
+                .fcarousel-link-display-url
+                {
+                    text-align:right;
+                }        
+                .fcarousel-link-display-button
+                {
+                    text-align:left;           
+                }
+            }
+
 
         
         }

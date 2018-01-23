@@ -292,7 +292,8 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative; }
+    position: relative;
+    border-bottom: #cccccc 1px solid; }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .fcarousel-link-photo {
       display: block;
       height: 100%;
@@ -384,6 +385,12 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url {
+  text-align: right; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button {
+  text-align: left; }
+
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
     Author     : Mohamed Al Moelef
@@ -429,7 +436,8 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative; }
+    position: relative;
+    border-bottom: #cccccc 1px solid; }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .fcarousel-offer-photo {
       display: block;
       height: 100%;
@@ -501,26 +509,29 @@
       text-align: center;
       padding: 5px;
       width: 50%; }
-  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title {
-    background: #000000;
-    color: #ffffff;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px; }
-  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: row;
-    background: #000000;
-    color: #ffffff;
-    font-size: 20px; }
-    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div {
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title {
+      background: #000000;
+      color: #ffffff;
+      font-size: 20px;
+      text-align: center;
       padding: 5px; }
-      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div span {
-        padding-left: 3px;
-        padding-right: 3px; }
+    .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      background: #000000;
+      color: #ffffff;
+      font-size: 20px; }
+      .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div {
+        padding: 5px; }
+        .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time div span {
+          padding-left: 3px;
+          padding-right: 3px; }
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action {
     flex-grow: 1;
     display: flex;
@@ -563,6 +574,12 @@
   border-bottom-left-radius: 20%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-url {
+  text-align: right; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button {
+  text-align: left; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -632,7 +649,8 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative; }
+    position: relative;
+    border-bottom: #cccccc 1px solid; }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-photo {
       display: block;
       height: 100%;
@@ -739,6 +757,10 @@
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover {
           background-color: #d7dce5; }
 
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .fcarousel-product-price, .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .fcarousel-product-price {
+  left: 20px;
+  right: auto; }
+
 .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon, .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon {
   right: 0;
   left: auto;
@@ -746,6 +768,12 @@
   border-bottom-left-radius: 20%;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url {
+  text-align: right; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button {
+  text-align: left; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
