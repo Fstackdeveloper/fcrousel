@@ -18,6 +18,8 @@ module.exports = {
       './src/scss/fcrousel.scss'
     ],'css/fcrousel.blue.css': [
       './src/scss/blue.scss'
+    ],'css/fcrousel.blue.back.css': [
+      './src/scss/blue.back.scss'
     ],'css/fcrousel.red.css': [
       './src/scss/red.scss'
     ]
