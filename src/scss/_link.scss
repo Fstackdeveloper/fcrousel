@@ -192,3 +192,29 @@
         }
         
  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-link
+        {
+
+            .fcarousel-link-photo-warp, .fcarousel-link-photo-crop
+            {
+                .photo-icon
+                    {
+                        right: 0;
+                        left:auto;
+                        border-top-left-radius: 20%;
+                        border-bottom-left-radius: 20%;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+            }
+
+        
+        }

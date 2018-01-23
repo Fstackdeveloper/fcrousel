@@ -89,6 +89,13 @@
       margin: 0;
       left: 0; }
 
+.fcarousel.fcarousel-rtl .fcarousel-outer {
+  right: 0;
+  left: auto; }
+  .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner {
+    right: 0;
+    left: auto; }
+
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
     Author     : Mohamed Almoelef
@@ -154,6 +161,9 @@
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
       width: 100%; } }
 
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-item {
+  float: right; }
+
 /* Items */
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -189,6 +199,14 @@
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon i {
       color: #ffffff; }
 
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
     Author     : Mohamed Almoelef
@@ -220,6 +238,14 @@
       background: rgba(0, 0, 0, 0.7); }
     .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i {
       color: #ffffff; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -349,6 +375,14 @@
         color: #4b4f56; }
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a:hover {
           background-color: #d7dce5; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon, .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -521,6 +555,14 @@
         color: #4b4f56; }
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover {
           background-color: #d7dce5; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon, .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM
@@ -696,6 +738,14 @@
         color: #4b4f56; }
         .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover {
           background-color: #d7dce5; }
+
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon, .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon {
+  right: 0;
+  left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 /* 
     Created on : Jan 14, 2018, 8:40:09 PM

@@ -26,11 +26,15 @@ export class pagination {
    //Animated Pagination
    stopOtherPaginationRequests = false;
    autoMove = false;
+   
+   //Direction RTL LTR
+   direction = "left";
     
    constructor(fcrousel)
     {
        this.fcrousel = fcrousel;
        this.autoMove = this.fcrousel.settings.move;
+       this.direction = this.fcrousel.settings.rtl?"right":"left";
        this.startAutoMove();      
        this.setJqueryPassiveEvent('touchstart');
        this.setJqueryPassiveEvent('touchmove');
@@ -71,7 +75,7 @@ export class pagination {
        this.ItemWidth = this.inner.find( ".fcarousel-item" ).eq(0).outerWidth(true);
        this.itemsPerPage = this.fcrousel['itemsPerPage'];
        this.itemsPerPageWidth =  this.ItemWidth * this.itemsPerPage;
-       this.LeftInnerWarp =Number(this.inner.css("left").replace('px', ''));
+       this.LeftInnerWarp =Number(this.inner.css(this.direction).replace('px', ''));
        this.ItemsCount = this.inner.find(".fcarousel-item" ).length;
        this.innerWidth = this.inner.width();
     }
@@ -82,12 +86,12 @@ export class pagination {
         let ItemMarginLeft =   Number(this.inner.find('.fcarousel-item').css("marginLeft").replace('px', ''));
         let ItemMarginRight =   Number(this.inner.find('.fcarousel-item').css("marginRight").replace('px', ''));            
         this.LeftInnerWarpAfter = (this.LeftInnerWarp - this.itemsPerPageWidth);
-        this.inner.css('left', this.LeftInnerWarpAfter);
+        this.inner.css(this.direction, this.LeftInnerWarpAfter);
     }
     
     removeInnerLeft()
     {
-        this.inner.css('left', this.LeftInnerWarp);
+        this.inner.css(this.direction, this.LeftInnerWarp);
     }
     
     
@@ -136,7 +140,11 @@ export class pagination {
     {
          let left = (this.mouseXAfter - this.mouseX) ;
          this.dragItemsCount = Math.round(left/this.ItemWidth);
-         this.DragDirection = (this.dragItemsCount > 0)?'right':'left';         
+         this.DragDirection = (this.dragItemsCount > 0)?'right':'left';    
+           if(this.fcrousel.settings.rtl === true)
+           {
+                this.DragDirection = (this.dragItemsCount > 0)?'left':'right'; 
+           }
          this.dragItemsCount = (this.dragItemsCount > 0)?this.dragItemsCount:(this.dragItemsCount*-1);         
     }
     
@@ -156,9 +164,17 @@ export class pagination {
         let rootThis = this;
         let x = (this.mouseXAfter - this.mouseX) ;
         let dragItemsCount = Math.round(x/this.ItemWidth);
-        let left = (dragItemsCount * this.ItemWidth) + this.LeftInnerWarpAfter;
+        var left = (dragItemsCount * this.ItemWidth) + this.LeftInnerWarpAfter;
         
-        this.inner.animate({left:left},150, function(){
+           if(this.fcrousel.settings.rtl === true)
+           {
+               left = this.LeftInnerWarpAfter - (dragItemsCount * this.ItemWidth);  
+           }
+           
+        var animation = {};
+        animation[this.direction] = left;
+        
+        this.inner.animate(animation,150, function(){
             rootThis.dragItemsCountDirection();
             rootThis.removeItemsLeftRight();    
             rootThis.removeInnerLeft();
@@ -206,8 +222,14 @@ export class pagination {
             {
                 e.preventDefault();
                 rootThis.mouseXAfter = e.clientX;     
-                let left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter;   
-                rootThis.inner.css('left',left);    
+                var left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter;  
+               
+               if(rootThis.fcrousel.settings.rtl === true)
+               {
+                   left = rootThis.LeftInnerWarpAfter - (rootThis.mouseXAfter - rootThis.mouseX);  
+               }
+               
+                rootThis.inner.css(rootThis.direction,left);    
             }
             else
             {
@@ -292,15 +314,16 @@ export class pagination {
    //Pagination By Click (Add Events)
    click()
    {
+       var rootThis = this;
         // On Click Events (Next Prev)
 	this.fcrousel.find( ".fcarousel-control-prev" ).on('click', { rootThis : this }, function(e)
             {
-		e.data.rootThis.prev();
+                rootThis.fcrousel.settings.rtl?e.data.rootThis.next():e.data.rootThis.prev();
             });
 
 	this.fcrousel.find( ".fcarousel-control-next" ).on('click', { rootThis : this }, function(e)
             {
-                e.data.rootThis.next();
+                rootThis.fcrousel.settings.rtl?e.data.rootThis.prev():e.data.rootThis.next();
             });
    }
 
@@ -346,7 +369,9 @@ export class pagination {
                 var target_item = length-1;
 		this.stopOtherPaginationRequests = true;
 		var vleft = this.fcrousel.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-		this.fcrousel.find(".fcarousel-inner" ).prepend(this.fcrousel.find( ".fcarousel-item" ).eq(target_item)).css('left',-vleft).animate({left:0},300,function(){rootThis.stopOtherPaginationRequests = false;					
+                var animation = {};
+                animation[this.direction] = 0;
+		this.fcrousel.find(".fcarousel-inner" ).prepend(this.fcrousel.find( ".fcarousel-item" ).eq(target_item)).css(this.direction,-vleft).animate(animation,300,function(){rootThis.stopOtherPaginationRequests = false;					
 		if(rootThis.autoMove) { rootThis.fcrousel['moveInterval'] = setInterval(function (){rootThis.next();}, 4000); }
                 });}
         }
@@ -361,9 +386,11 @@ export class pagination {
 		var target_item = 0;
                 this.stopOtherPaginationRequests = true;
 		var vleft = this.fcrousel.find( ".fcarousel-item" ).eq(target_item).outerWidth();
-		this.fcrousel.find(".fcarousel-inner" ).animate({left:-vleft},300,function(){
+                var animation = {};
+                animation[this.direction] = -vleft;
+		this.fcrousel.find(".fcarousel-inner" ).animate(animation,300,function(){
 		rootThis.stopOtherPaginationRequests = false; 
-		$(this).css('left',0); 
+		$(this).css(rootThis.direction,0); 
 		$(this).append(rootThis.fcrousel.find( ".fcarousel-item" ).eq(target_item));
 		if(rootThis.autoMove) { rootThis.fcrousel['moveInterval'] = setInterval(function (){rootThis.prev();}, 4000);}
             });}

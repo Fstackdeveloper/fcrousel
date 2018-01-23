@@ -44,4 +44,16 @@
 	}
         
 
-      
+.fcarousel.fcarousel-rtl
+{                
+                    .fcarousel-outer
+                    {
+                        right:0;
+                        left: auto;
+                            .fcarousel-inner
+                            {
+                                right:0;
+                                left: auto;
+                            }
+                    }  
+}

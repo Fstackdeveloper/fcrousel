@@ -35,6 +35,11 @@ $.fn.fcarouselNew = function() {
  fdesign.buttonsWithWarpper();
 
     
+ //Border Radius Fcrousel Items
+ if(fcrousel.settings.rtl === true)
+ {
+     fcrousel.addClass("fcarousel-rtl");
+ }
 
 
 

@@ -18,9 +18,19 @@ export class sizing {
 
     resize()
         {    
-            let fcarouselInnerPaddingLeft = Number(this.fcarousel.find('.fcarousel-inner').eq(0).css("padding-left").replace('px', ''));
+            if (this.fcarousel.settings.rtl === true)
+            {
+                var fcarouselInnerPaddingLeft = Number(this.fcarousel.find('.fcarousel-inner').eq(0).css("padding-right").replace('px', ''));
+                var ItemMarginLeft =   Number(this.fcarousel.find('.fcarousel-item').css("marginRight").replace('px', ''));
+            }
+            else
+            {
+                var fcarouselInnerPaddingLeft = Number(this.fcarousel.find('.fcarousel-inner').eq(0).css("padding-left").replace('px', ''));
+                var ItemMarginLeft =   Number(this.fcarousel.find('.fcarousel-item').css("marginLeft").replace('px', ''));
+            }
+            
             let NextWarpWidth = this.fcarousel.find('.fcarousel-control-next-wrapper').eq(0).outerWidth();
-            let ItemMarginLeft =   Number(this.fcarousel.find('.fcarousel-item').css("marginLeft").replace('px', ''));
+           
 
             let width_cut = fcarouselInnerPaddingLeft + NextWarpWidth + ItemMarginLeft ;
 

@@ -267,3 +267,28 @@
         }
         
  }
+ 
+ 
+ 
+ 
+ 
+ 
+        
+.fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-product
+        {
+
+            .fcarousel-product-photo-warp, .fcarousel-product-photo-crop
+            {
+                .photo-icon
+                    {
+                        right: 0;
+                        left:auto;
+                        border-top-left-radius: 20%;
+                        border-bottom-left-radius: 20%;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+            }
+
+        
+        }
