@@ -172,7 +172,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a 
                 {
-                  background-color: ${color.lighten(0.40)};
+                  background-color: ${color.lighten(0.35)};
                   color: ${color.lighten(2)};
                   border-color: ${color.lighten(2)}; 
                 }
@@ -181,7 +181,7 @@ export class design {
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover 
                 {
-                    background-color: ${color.lighten(0.90)};
+                    background-color: ${color.lighten(0.85)};
                     color: ${color}; 
                 }
 
@@ -200,13 +200,13 @@ export class design {
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title 
                 {
-                    background: ${color.lighten(0.90)};
+                    background: ${color.lighten(0.85)};
                     color: ${color}; 
                 }
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time 
                 {
-                    background: ${color.lighten(0.90)};
+                    background: ${color.lighten(0.85)};
                     color: ${color}; 
                 }
         </style>
@@ -300,7 +300,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a 
                 {
-                  background-color: ${color.lighten(0.90)};
+                  background-color: ${color.lighten(0.85)};
                   color: ${color};
                   border-color: ${color}; 
                 }
@@ -327,13 +327,13 @@ export class design {
                 }
                  .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title 
                 {
-                    background: ${color.lighten(0.90)};
+                    background: ${color.lighten(0.85)};
                     color: ${color}; 
                 }
             
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time 
                 {
-                    background: ${color.lighten(0.90)};
+                    background: ${color.lighten(0.85)};
                     color: ${color}; 
                 }
             </style>
