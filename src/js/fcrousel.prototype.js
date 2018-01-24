@@ -8,3 +8,15 @@
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
+
+
+
+$.fn.InheritedBackgroundColor = function(){ 
+   
+   var bc =  $(this).parent().css("background-color");
+   if( bc === "rgba(0, 0, 0, 0)" ){
+         return $($(this).parent()).InheritedBackgroundColor();
+      }
+      
+    return bc;
+};

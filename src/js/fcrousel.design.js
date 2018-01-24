@@ -345,8 +345,10 @@ export class design {
         if(this.fcarousel.settings.primary_color)
         {
             var style;
-            
-            if(this.fcarousel.settings.primary_color_back === true)
+            var backgroundColor = this.Color(this.fcarousel.InheritedBackgroundColor()).hex();
+            var primary = this.Color(this.fcarousel.settings.primary_color).hex();
+                        
+            if(this.fcarousel.settings.primary_color_back === true || backgroundColor === primary )
             {
                  style = this.styleBackground();
             }
