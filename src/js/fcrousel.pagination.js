@@ -266,7 +266,6 @@ export class pagination {
         
             let rootThis = this;
             this.fcrousel.find( ".fcarousel-item" ).on("touchstart", function(e) {  
-                e.preventDefault();
                 if (!rootThis.stopOtherPaginationRequests)
                 {
                     if(rootThis.autoMove) { clearInterval(rootThis.fcrousel['moveInterval']); }
@@ -291,7 +290,6 @@ export class pagination {
     {
         let rootThis = this;
         item.on("touchmove", function(e) {
-            e.preventDefault();
             rootThis.mouseXAfter = e.originalEvent.changedTouches[0].clientX;                    
             let left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter; 
             rootThis.inner.css('left',left);    
@@ -305,7 +303,6 @@ export class pagination {
     {
         let rootThis = this;
         item.on("touchend", function(e) {
-            e.preventDefault();
             rootThis.dragMoveEnd();
             rootThis.removeEvents($(this));             
         });
