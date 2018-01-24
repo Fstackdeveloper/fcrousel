@@ -79,11 +79,11 @@ export class pagination {
             rootThis.DragEndTime =  (new Date()).getTime();
             let time =rootThis.DragEndTime - rootThis.DragStartTime;
             
-            if (time < 600 &&  y > 40)
+            if (time < 600 &&  y > 20)
             {
                 rootThis.DontStopWindowMove = true;
             }
-            
+                        
 
           
                 if(rootThis.stopWindowMove === true && rootThis.DontStopWindowMove ===false)
@@ -344,8 +344,9 @@ export class pagination {
         let rootThis = this;
         item.on("touchmove", function(e) {
             rootThis.mouseXAfter = e.originalEvent.changedTouches[0].clientX;  
-            rootThis.DragEndTime =  (new Date()).getTime();
-            if(rootThis.mouseXAfter !== rootThis.mouseX && (rootThis.DragEndTime - rootThis.DragStartTime) > 600)
+            let x  = rootThis.mouseXAfter - rootThis.mouseX;
+            x = (x>0)?x:(x*-1);
+            if(x > 30 )
             {
                rootThis.stopWindowMove = true; 
             }
