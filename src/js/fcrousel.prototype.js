@@ -12,11 +12,17 @@ String.prototype.capitalize = function() {
 
 
 $.fn.InheritedBackgroundColor = function(){ 
+
+       var bc =  $(this).parent().css("background-color");
+         if($(this).parent().prop("tagName") !== 'BODY')
+         {
+           if( bc === "rgba(0, 0, 0, 0)" ){
+                 return $($(this).parent()).InheritedBackgroundColor();
+              }
+          }
+
+          console.log(bc);
+
+        return bc;
    
-   var bc =  $(this).parent().css("background-color");
-   if( bc === "rgba(0, 0, 0, 0)" ){
-         return $($(this).parent()).InheritedBackgroundColor();
-      }
-      
-    return bc;
 };

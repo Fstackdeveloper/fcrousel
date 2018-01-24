@@ -81,14 +81,14 @@ export class design {
       <style>
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item 
                 {
-                  border-color: ${color.lighten(2)};
-                  color: ${color.lighten(2)};
+                  border-color: ${color.lighten(3)};
+                  color: ${color.lighten(3)};
                   background-color: ${color};
                 }
 
                 .${id}.fcarousel .fcarousel-control-prev-wrapper, .${id}.fcarousel .fcarousel-control-next-wrapper 
                 {
-                  background-color: ${color.lighten(2)}; 
+                  background-color: ${color.lighten(3)}; 
                 }
                 
                 .${id}.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-next i, .${id}.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev i, .${id}.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next i, .${id}.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-prev i 
@@ -98,7 +98,7 @@ export class design {
 
                 .${id}.fcarousel  .fcarousel-block .fcarousel-block-header 
                 {
-                  background-color: ${color.lighten(2)};
+                  background-color: ${color.lighten(3)};
                   color: ${color}; 
                 }
 
@@ -110,7 +110,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-block .fcarousel-block-header 
                 {
-                  border-bottom-color: ${color.lighten(2)}; 
+                  border-bottom-color: ${color.lighten(3)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon,
@@ -122,7 +122,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon 
                 {
-                  background-color: ${color.lighten(2)}; 
+                  background-color: ${color.lighten(3)}; 
                 }
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i,
@@ -134,7 +134,7 @@ export class design {
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon i,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon i 
                 {
-                    color: ${color.lighten(0.4)}; 
+                    color: ${color.lighten(0.2)}; 
                 }
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover,
@@ -146,7 +146,7 @@ export class design {
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon:hover,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon:hover 
                 {
-                    background-color: ${color.lighten(2)}; 
+                    background-color: ${color.lighten(3)}; 
                 }
         
                     .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover i,
@@ -165,23 +165,23 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-details 
                 {
-                  color: ${color.lighten(2)}; 
+                  color: ${color.lighten(3)};
                 }
 
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a 
                 {
-                  background-color: ${color.lighten(0.35)};
-                  color: ${color.lighten(2)};
-                  border-color: ${color.lighten(2)}; 
+                  background-color: ${color.lighten(0.20)};
+                  color: ${color.lighten(3)};
+                  border-color: ${color.lighten(3)}; 
                 }
        
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-button a:hover,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover 
                 {
-                    background-color: ${color.lighten(0.85)};
+                    background-color: ${color.lighten(0.70)};
                     color: ${color}; 
                 }
 
@@ -200,13 +200,13 @@ export class design {
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title 
                 {
-                    background: ${color.lighten(0.85)};
+                    background: ${color.lighten(0.70)};
                     color: ${color}; 
                 }
         
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time 
                 {
-                    background: ${color.lighten(0.85)};
+                    background: ${color.lighten(0.70)};
                     color: ${color}; 
                 }
         </style>
@@ -225,7 +225,7 @@ export class design {
                 {
                   border-color: ${color};
                   color: ${color};
-                  background-color: ${color.lighten(2)}; 
+                  background-color: ${color.lighten(3)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-control-prev-wrapper, .${id}.fcarousel .fcarousel-control-next-wrapper 
@@ -234,13 +234,13 @@ export class design {
                 }
                 .${id}.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-next i, .${id}.fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev i, .${id}.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next i, .${id}.fcarousel .fcarousel-control-next-wrapper .fcarousel-control-prev i 
                 {
-                    color: ${color.lighten(2)}; 
+                    color: ${color.lighten(3)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-block .fcarousel-block-header 
                 {
                   background-color: ${color};
-                  color: ${color.lighten(2)}; 
+                  color: ${color.lighten(3)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp,
@@ -263,7 +263,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon 
                 {
-                  background-color: ${color.lighten(0.4)};
+                  background-color: ${color.lighten(0.2)};
                   opacity: 0.9;
                 }
               .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i,
@@ -275,7 +275,7 @@ export class design {
               .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon i,
               .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon i 
                 {
-                   color: ${color.lighten(2)}; 
+                   color: ${color.lighten(3)}; 
                 }
               .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover,
               .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon:hover,
@@ -300,7 +300,7 @@ export class design {
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a 
                 {
-                  background-color: ${color.lighten(0.85)};
+                  background-color: ${color.lighten(0.70)};
                   color: ${color};
                   border-color: ${color}; 
                 }
@@ -309,15 +309,15 @@ export class design {
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover,
                   .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover 
                 {
-                    background-color: ${color.lighten(0.40)};
-                    color: ${color.lighten(1)}; 
+                    background-color: ${color.lighten(0.20)};
+                    color: ${color.lighten(3)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url span,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url span,
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-url span 
                 {
-                  color: ${color.lighten(0.60)}; 
+                  color: ${color.lighten(0.20)}; 
                 }
 
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end 
@@ -327,13 +327,13 @@ export class design {
                 }
                  .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-title 
                 {
-                    background: ${color.lighten(0.85)};
+                    background: ${color.lighten(0.70)};
                     color: ${color}; 
                 }
             
                 .${id}.fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-end .fcarousel-offer-end-time 
                 {
-                    background: ${color.lighten(0.85)};
+                    background: ${color.lighten(0.70)};
                     color: ${color}; 
                 }
             </style>
@@ -345,6 +345,7 @@ export class design {
         if(this.fcarousel.settings.primary_color)
         {
             var style;
+           
             var backgroundColor = this.Color(this.fcarousel.InheritedBackgroundColor()).hex();
             var primary = this.Color(this.fcarousel.settings.primary_color).hex();
                         
