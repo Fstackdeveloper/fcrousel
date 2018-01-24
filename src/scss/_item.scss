@@ -22,6 +22,7 @@
                 background-color: #ffffff;
                 border: #cccccc 1px solid;  
                 border-radius: 5px;
+                text-align: left;
 
                 
                     @media (max-width: 768px) {
@@ -33,5 +34,6 @@
 
 .fcarousel.fcarousel-rtl .fcarousel-outer .fcarousel-inner .fcarousel-item
 {
-                float: right;                
+                float: right;  
+                text-align: right;
 }
