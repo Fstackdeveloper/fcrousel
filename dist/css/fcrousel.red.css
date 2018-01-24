@@ -6,13 +6,17 @@
 */
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-item {
   border-color: red;
-  color: red; }
+  color: red;
+  background-color: white; }
 
 .fcarousel .fcarousel-control-prev-wrapper, .fcarousel .fcarousel-control-next-wrapper {
   background-color: red; }
+  .fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-next i, .fcarousel .fcarousel-control-prev-wrapper .fcarousel-control-prev i, .fcarousel .fcarousel-control-next-wrapper .fcarousel-control-next i, .fcarousel .fcarousel-control-next-wrapper .fcarousel-control-prev i {
+    color: white; }
 
 .fcarousel-block .fcarousel-block-header {
-  background-color: red; }
+  background-color: red;
+  color: white; }
 
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp,
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop,
@@ -31,8 +35,17 @@
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon,
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon,
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon {
-  background-color: red;
-  opacity: 0.7; }
+  background-color: #ff6666;
+  opacity: 0.9; }
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-crop .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-warp .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon i,
+  .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon i {
+    color: white; }
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-warp .photo-icon:hover,
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-photo-crop .photo-icon:hover,
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-photo-warp .photo-icon:hover,
@@ -41,8 +54,7 @@
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-photo-crop .photo-icon:hover,
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-warp .photo-icon:hover,
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-photo-crop .photo-icon:hover {
-    background-color: red;
-    opacity: 1; }
+    background-color: red; }
 
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-details,
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-details,
@@ -59,7 +71,7 @@
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-button a:hover,
   .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-offer .fcarousel-offer-action .fcarousel-offer-display-button a:hover {
     background-color: #ff6666;
-    color: #ffffff; }
+    color: white; }
 
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-link .fcarousel-link-action .fcarousel-link-display-url span,
 .fcarousel .fcarousel-outer .fcarousel-inner .fcarousel-product .fcarousel-product-action .fcarousel-product-display-url span,

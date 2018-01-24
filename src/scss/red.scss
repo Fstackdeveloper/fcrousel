@@ -11,17 +11,25 @@ $primary-color: red;
 {
     border-color: $primary-color;
     color: $primary-color;
+    background-color: lighten($primary-color, 100%);
 }
 
 .fcarousel .fcarousel-control-prev-wrapper , .fcarousel .fcarousel-control-next-wrapper
 {
     background-color: $primary-color;
+    .fcarousel-control-next, .fcarousel-control-prev
+    {
+        i{
+            color: lighten($primary-color, 100%);
+        }
+    }
 }
 
 
 .fcarousel-block .fcarousel-block-header
 {
     background-color: $primary-color;
+    color: lighten($primary-color, 100%);
 }
 
 
@@ -56,11 +64,13 @@ $primary-color: red;
      {
          .photo-icon
          {
-                background-color: $primary-color; 
-                opacity: 0.7;
+                background-color: lighten($primary-color, 20%);
+                opacity: 0.9;
+                i {
+                    color: lighten($primary-color, 100%);
+                }
                 &:hover {
                     background-color: $primary-color;
-                    opacity: 1;
                 }
 
          }
@@ -89,7 +99,7 @@ $primary-color: red;
                 &:hover
                 {
                     background-color: lighten($primary-color, 20%);
-                    color: #ffffff;
+                    color: lighten($primary-color, 100%);
                 }
             }
     }

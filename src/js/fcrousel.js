@@ -33,6 +33,7 @@ $.fn.fcarouselNew = function() {
  fcrousel.settings = new setting($(this).data()).get();
  fcrousel.items =  (new items(fcrousel)).get();
  fcrousel.lang = new language(fcrousel);
+
  var size = new sizing(fcrousel);
  var fdesign = new design(fcrousel);
  fdesign.buttonsWithWarpper();
