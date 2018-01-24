@@ -1,6 +1,6 @@
 {
   "name": "fcrousel",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Multi Items Crousel for Bootstrap",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
