@@ -86,7 +86,6 @@ $.fn.fcarouselNew = function() {
 
 
 
-
 new pagination(fcrousel);
 
         

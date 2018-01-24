@@ -16,6 +16,8 @@ export class pagination {
    ItemWidth;
    mouseX;
    mouseXAfter;
+   mouseY;
+   mouseYAfter;
    ItemsCount;
    inner;
    innerWidth;
@@ -29,6 +31,14 @@ export class pagination {
    
    //Direction RTL LTR
    direction = "left";
+   
+   //Prevent Window Touch Move
+   stopWindowMove = false;
+   DontStopWindowMove = false;
+   
+   //Drag Time
+   DragStartTime;
+   DragEndTime;
     
    constructor(fcrousel)
     {
@@ -42,6 +52,48 @@ export class pagination {
        this.mouseDown();
        this.touchStart();
        this.click();
+       this.onWindoTouchMove();
+    }
+    
+    
+    onWindoTouchMove()
+    {
+        let rootThis = this;
+        
+        
+        window.addEventListener('touchstart', function(e){
+            rootThis.DragStartTime =  (new Date()).getTime();
+            rootThis.mouseY = e.changedTouches[0].clientY; 
+            }, { passive: false }); 
+            
+        window.addEventListener('touchend', function(e){
+            rootThis.DragEndTime =  (new Date()).getTime();
+            rootThis.DontStopWindowMove = false;
+            }, { passive: false }); 
+
+        
+        window.addEventListener('touchmove', function(e){
+            rootThis.mouseYAfter = e.changedTouches[0].clientY;
+            let y = rootThis.mouseYAfter - rootThis.mouseY;
+            y = (y >= 0)?y:(y*-1);
+            rootThis.DragEndTime =  (new Date()).getTime();
+            let time =rootThis.DragEndTime - rootThis.DragStartTime;
+            
+            if (time < 600 &&  y > 40)
+            {
+                rootThis.DontStopWindowMove = true;
+            }
+            
+
+          
+                if(rootThis.stopWindowMove === true && rootThis.DontStopWindowMove ===false)
+                {
+                    e.preventDefault();
+                    return false;
+                }
+                
+            }, { passive: false }); 
+            
     }
         
         
@@ -77,7 +129,7 @@ export class pagination {
        this.itemsPerPageWidth =  this.ItemWidth * this.itemsPerPage;
        this.LeftInnerWarp =Number(this.inner.css(this.direction).replace('px', ''));
        this.ItemsCount = this.inner.find(".fcarousel-item" ).length;
-       this.innerWidth = this.inner.width();
+       this.innerWidth = Number(this.inner.css('width').replace('px', ''));
     }
 
     setInnerLeft()
@@ -268,6 +320,7 @@ export class pagination {
             this.fcrousel.find( ".fcarousel-item" ).on("touchstart", function(e) {  
                 if (!rootThis.stopOtherPaginationRequests)
                 {
+                    rootThis.DragStartTime =  (new Date()).getTime();
                     if(rootThis.autoMove) { clearInterval(rootThis.fcrousel['moveInterval']); }
                     rootThis.stopOtherPaginationRequests = true;
                     rootThis.setVariables();
@@ -290,7 +343,12 @@ export class pagination {
     {
         let rootThis = this;
         item.on("touchmove", function(e) {
-            rootThis.mouseXAfter = e.originalEvent.changedTouches[0].clientX;                    
+            rootThis.mouseXAfter = e.originalEvent.changedTouches[0].clientX;  
+            rootThis.DragEndTime =  (new Date()).getTime();
+            if(rootThis.mouseXAfter !== rootThis.mouseX && (rootThis.DragEndTime - rootThis.DragStartTime) > 600)
+            {
+               rootThis.stopWindowMove = true; 
+            }
             let left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter;                
                if(rootThis.fcrousel.settings.rtl === true)
                {
@@ -309,6 +367,8 @@ export class pagination {
     {
         let rootThis = this;
         item.on("touchend", function(e) {
+            rootThis.DragEndTime =  (new Date()).getTime();
+            rootThis.stopWindowMove = false;
             rootThis.dragMoveEnd();
             rootThis.removeEvents($(this));             
         });
