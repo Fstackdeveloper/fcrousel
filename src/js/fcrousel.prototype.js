@@ -20,9 +20,6 @@ $.fn.InheritedBackgroundColor = function(){
                  return $($(this).parent()).InheritedBackgroundColor();
               }
           }
-
-          console.log(bc);
-
         return bc;
    
 };

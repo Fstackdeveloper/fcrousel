@@ -63,7 +63,7 @@ export class offer extends fitem {
             </div>
             <div class='fcarousel-offer-details'>
             <div class='fcarousel-offer-title'>${this.item.title}</div>
-            <div class='fcarousel-offer-desc'>${this.item.description?this.item.description:''}</div>
+            <div class='fcarousel-offer-desc'>${this.item.description?this.item.description:' '}</div>
             </div>
             <div class='fcarousel-offer-action'>
             <div class='fcarousel-offer-display-url'> <span>${this.item.domain} </span></div>
