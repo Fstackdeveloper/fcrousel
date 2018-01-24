@@ -291,8 +291,14 @@ export class pagination {
         let rootThis = this;
         item.on("touchmove", function(e) {
             rootThis.mouseXAfter = e.originalEvent.changedTouches[0].clientX;                    
-            let left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter; 
-            rootThis.inner.css('left',left);    
+            let left = (rootThis.mouseXAfter - rootThis.mouseX) + rootThis.LeftInnerWarpAfter;                
+               if(rootThis.fcrousel.settings.rtl === true)
+               {
+                   left = rootThis.LeftInnerWarpAfter - (rootThis.mouseXAfter - rootThis.mouseX);  
+               }
+               
+
+            rootThis.inner.css(rootThis.direction,left);    
         });
 
     }
