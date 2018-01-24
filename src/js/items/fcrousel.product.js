@@ -66,7 +66,7 @@ export class product extends fitem {
 
             <div class='fcarousel-product-details'>
             <div class='fcarousel-product-title'>${this.item.title}</div>
-            <div class='fcarousel-product-desc'>${this.item.description}</div>
+            <div class='fcarousel-product-desc'>${this.item.description?this.item.description:''}</div>
             </div>
             <div class='fcarousel-product-action'>
             <div class='fcarousel-product-display-url'> <span>${this.item.domain} </span></div>

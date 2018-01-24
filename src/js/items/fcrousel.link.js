@@ -37,7 +37,7 @@ export class link extends fitem {
             : ''}
             <div class='fcarousel-link-details'>
             <div class='fcarousel-link-title'>${this.item.title}</div>
-            <div class='fcarousel-link-desc'>${this.item.description}</div>
+            <div class='fcarousel-link-desc'>${this.item.description?this.item.description:''}</div>
             </div>
             <div class='fcarousel-link-action'>
             <div class='fcarousel-link-display-url'> <span>${this.item.domain} </span></div>
