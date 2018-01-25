@@ -115,10 +115,13 @@
                     font-weight:bold;
                     width:100%;
                     display:block;
-                    font-size: 20px;
+                    font-size: 14px;
                     overflow: hidden;
                     margin: 0;
                     box-sizing: border-box;
+                    white-space: nowrap; 
+                    text-overflow: ellipsis; 
+
                 }
                 
                 .fcarousel-offer-desc
@@ -127,11 +130,14 @@
                     padding-right:5px;
                     width:100%;
                     display:block;
-                    font-size: 18px;
+                    font-size: 12px;
                     overflow: hidden;
                     white-space:normal;
                     margin: 0;
                     box-sizing: border-box;
+                    white-space: nowrap; 
+                    text-overflow: ellipsis; 
+
                 }
 
         }
