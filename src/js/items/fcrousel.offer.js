@@ -110,13 +110,10 @@ export class offer extends fitem {
             var _day = _hour * 24;
             var timer;
             var rootThis =this;
-            
-            console.log('Date ' +dt+'   Time '+ end);
 
             function showRemaining() {
                 var now = new Date();
                 var distance = end - now;
-                console.log('Distanse ' + distance);
                 if (distance < 0) {
 
                     clearInterval(timer);
