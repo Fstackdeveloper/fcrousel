@@ -249,7 +249,7 @@
         
         .fcarousel-offer-display-button
         {
-            width:50%;
+            min-width:50%;
             box-sizing: border-box;
             text-align:right;
             padding-right:10px;
@@ -258,7 +258,7 @@
 
             
             a {
-                font-size: 20px;
+                font-size: 17px;
                 padding: 5px;
                 background-color: #f6f7f9;
                 border: rgb(206, 208, 212) 1px solid;
