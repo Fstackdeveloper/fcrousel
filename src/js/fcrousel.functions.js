@@ -15,6 +15,11 @@ const openNewTab = (url) => {
   win.focus();
 };
 
+const openNewPage = (url) => {
+     window.location.href = url;
+};
+
+
 const vimeoID = (url) => {
     regExp = /^.*(vimeo\.com\/)((channels\/[A-z]+\/)|(groups\/[A-z]+\/videos\/))?([0-9]+)/;
     parseUrl = regExp.exec( url );
@@ -92,4 +97,4 @@ const LightenDarkenColor = (color, luminosity) => {
 };
 
 
-export {uniqId, openNewTab, vimeoID, youtubeID, extractHostname, extractRootDomain, extension, LightenDarkenColor};
+export {uniqId, openNewTab, openNewPage, vimeoID, youtubeID, extractHostname, extractRootDomain, extension, LightenDarkenColor};

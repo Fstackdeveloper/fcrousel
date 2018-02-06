@@ -85,6 +85,7 @@ export class fitem {
         {
             let rootThis = this;
             this.itemElement.on('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
                     e.stopImmediatePropagation();
                     if ($(this).find('a').length !== 0 && rootThis.ItemDragStart === false)

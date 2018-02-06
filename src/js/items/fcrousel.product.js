@@ -6,7 +6,7 @@
 */
 
 import {fitem} from './fcrousel.item.js';
-import {openNewTab} from '../fcrousel.functions.js';
+import {openNewPage} from '../fcrousel.functions.js';
 
 export class product extends fitem {
           
@@ -82,7 +82,7 @@ export class product extends fitem {
         click(element)
         {
                   
-                  openNewTab(this.item.link);
+                  openNewPage(this.item.link);
         }
         
         
