@@ -127,8 +127,11 @@ export class offer extends fitem {
                 var seconds = Math.floor((distance % _minute) / _second);
 
                 $('#'+id).find('.days').eq(0).find('span').eq(0).text(days);
+                if(days === 0) $('#'+id).find('.days').eq(0).hide();
                 $('#'+id).find('.hours').eq(0).find('span').eq(0).text(hours);
+                if(hours === 0) $('#'+id).find('.hours').eq(0).hide();
                 $('#'+id).find('.minutes').eq(0).find('span').eq(0).text(minutes);
+                if(minutes === 0) $('#'+id).find('.minutes').eq(0).hide();
                 $('#'+id).find('.seconds').eq(0).find('span').eq(0).text(seconds);
             }
 
