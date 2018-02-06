@@ -11,7 +11,7 @@ const ar = {
     learn_more:'المزيد',
     watch:'مشاهدة',
     get_offer:'طلب',
-    offer_end:'ينتهي العرض',
+    offer_end:'ينتهي العرض خلال',
     days:'يوم',
     hours:'ساعة',
     minutes:'دقيقة',
