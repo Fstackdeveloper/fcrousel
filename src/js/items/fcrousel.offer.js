@@ -42,7 +42,7 @@ export class offer extends fitem {
             
             <div class="fcarousel-offer-price">
             <div class="fcarousel-offer-price-before">
-            ${this.item.price_before}
+            <span>${this.item.price_before}</span>
             </div>
             <div class="fcarousel-offer-price-now">
             ${this.item.price}

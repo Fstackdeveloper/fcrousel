@@ -8,7 +8,7 @@ const en = {
     buy:'Buy',  
     learn_more:'Learn More',
     watch:'Watch',
-    get_offer:'Get Offer',
+    get_offer:'Order',
     offer_end:'Offer End',
     days:'Days',
     hours:'hrs',

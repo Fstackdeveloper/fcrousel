@@ -7,10 +7,10 @@
 
 
 const ar = {
-    buy:'اشتر',  
+    buy:'شراء',  
     learn_more:'المزيد',
-    watch:'شاهد',
-    get_offer:'احصل على العرض',
+    watch:'مشاهدة',
+    get_offer:'طلب',
     offer_end:'ينتهي العرض',
     days:'يوم',
     hours:'ساعة',
